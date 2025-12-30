@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR"
+				android:id="@+id/parent_layout" android:paddingLeft="10px" android:paddingTop="10px"
+				android:paddingRight="10px" android:paddingBottom="4px">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:padding="10px"
+			android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="购买人名称："
+				android:id="@+id/lbl_name" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_toRightOf="@+id/lbl_name" android:layout_alignTop="@+id/lbl_name"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="墓位编号："
+				android:id="@+id/lbl_no" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_name" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_no" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_no" android:layout_toRightOf="@+id/lbl_no"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="交易时间："
+				  android:id="@+id/lbl_time" android:textColor="#303030" android:textSize="22px"
+				  android:layout_below="@+id/txt_no" android:layout_marginTop="10px"/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Text"
+				  android:id="@+id/txt_time" android:textColor="#303030" android:textSize="22px"
+				  android:layout_alignTop="@+id/lbl_time" android:layout_toRightOf="@+id/lbl_time"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="实领金额："
+				  android:id="@+id/lbl_price" android:textColor="#303030" android:textSize="22px"
+				  android:layout_below="@+id/txt_time" android:layout_marginTop="10px"/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="New Text"
+				  android:id="@+id/txt_date" android:textColor="#303030" android:textSize="22px"
+				  android:layout_alignTop="@+id/lbl_price" android:layout_toRightOf="@+id/lbl_price"/>
+	</RelativeLayout>
+</RelativeLayout>

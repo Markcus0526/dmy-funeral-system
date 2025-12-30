@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR"
+				android:padding="10px" android:id="@+id/parent_layout">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@drawable/preset_rect_transparent_gray"
+			android:padding="10px" android:id="@+id/content_layout">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="客户名称："
+				android:id="@+id/lbl_name" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_name" android:layout_toRightOf="@+id/lbl_name"
+				android:paddingRight="12px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="预约日期："
+				android:id="@+id/lbl_time" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_name" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_time" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_time" android:layout_toRightOf="@+id/lbl_time"/>
+		<ImageView
+				android:layout_width="20px"
+				android:layout_height="20px"
+				android:id="@+id/img_new" android:layout_alignTop="@+id/txt_name"
+				android:layout_alignRight="@+id/txt_name"
+				android:background="@drawable/preset_circle_red"/>
+	</RelativeLayout>
+	<ImageButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btn_item" android:layout_alignTop="@+id/content_layout"
+			android:layout_alignLeft="@+id/content_layout" android:layout_alignBottom="@+id/content_layout"
+			android:layout_alignRight="@+id/content_layout"
+			android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+</RelativeLayout>

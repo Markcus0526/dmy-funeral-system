@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="生活服务" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:padding="20px">
+			<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="8px">
+				<RelativeLayout
+						android:layout_width="0dp"
+						android:layout_height="fill_parent" android:layout_weight="2" android:layout_marginRight="8px"
+						android:background="#009A44" android:padding="2px">
+					<ImageView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/imageView13" android:background="@drawable/bk_food"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="40px"
+							android:text="美食"
+							android:id="@+id/textView16" android:background="#D0000000"
+							android:layout_alignParentBottom="true" android:gravity="center"
+							android:textColor="#FFFFFF" android:textSize="22px"/>
+					<ImageButton
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/btn_food"
+							android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="0dp"
+						android:layout_height="fill_parent" android:layout_weight="1" android:layout_marginLeft="8px"
+						android:background="#009A44" android:padding="2px">
+					<ImageView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/imageView14" android:background="@drawable/bk_hotel"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="40px"
+							android:text="酒店"
+							android:id="@+id/textView17" android:background="#D0000000"
+							android:layout_alignParentBottom="true" android:gravity="center"
+							android:textColor="#FFFFFF" android:textSize="22px"/>
+					<ImageButton
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/btn_hotel"
+							android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+				</RelativeLayout>
+			</LinearLayout>
+			<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8px">
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="8px">
+					<RelativeLayout
+							android:layout_width="0dp"
+							android:layout_height="fill_parent" android:layout_weight="4"
+							android:layout_marginRight="8px" android:background="#009A44">
+						<RelativeLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:layout_centerInParent="true">
+							<ImageView
+									android:layout_width="match_parent"
+									android:layout_height="60px"
+									android:id="@+id/imageView17" android:layout_centerHorizontal="true"
+									android:scaleType="centerInside" android:src="@drawable/icon_plane"/>
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="出行"
+									android:id="@+id/textView13" android:layout_centerHorizontal="true"
+									android:layout_below="@+id/imageView17" android:textColor="#FFFFFF"
+									android:textSize="22px" android:layout_marginTop="8px"/>
+						</RelativeLayout>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_plane"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="0dp"
+							android:layout_height="fill_parent" android:layout_weight="6"
+							android:layout_marginLeft="8px" android:background="#009A44" android:padding="2px">
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView15" android:background="@drawable/bk_cinema"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="40px"
+								android:text="电影时刻表"
+								android:id="@+id/textView18" android:background="#D0000000"
+								android:layout_alignParentBottom="true" android:gravity="center"
+								android:textColor="#FFFFFF" android:textSize="22px"/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_cinema"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8px">
+					<RelativeLayout
+							android:layout_width="0dp"
+							android:layout_height="fill_parent" android:layout_weight="4"
+							android:layout_marginRight="8px"
+							android:background="#009A44" android:padding="2px">
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView16" android:background="@drawable/bk_birdseyeview"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="40px"
+								android:text="景点"
+								android:id="@+id/textView19" android:background="#D0000000"
+								android:layout_alignParentBottom="true" android:gravity="center"
+								android:textColor="#FFFFFF" android:textSize="22px"/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_view"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<LinearLayout
+							android:orientation="horizontal"
+							android:layout_width="0dp"
+							android:layout_height="fill_parent" android:layout_weight="6"
+							android:layout_marginLeft="8px">
+						<RelativeLayout
+								android:layout_width="0dp"
+								android:layout_height="fill_parent" android:layout_weight="1"
+								android:layout_marginRight="8px"
+								android:background="#009A44">
+							<RelativeLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content" android:layout_centerInParent="true">
+								<ImageView android:layout_width="match_parent" android:layout_height="60px"
+										   android:id="@+id/imageView18" android:layout_centerHorizontal="true"
+										   android:scaleType="centerInside" android:src="@drawable/icon_test"/>
+								<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+										  android:text="考试" android:id="@+id/textView14"
+										  android:layout_centerHorizontal="true" android:layout_below="@+id/imageView18"
+										  android:textColor="#FFFFFF" android:textSize="22px"
+										  android:layout_marginTop="8px"/>
+							</RelativeLayout>
+							<ImageButton
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/btn_test"
+									android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+						</RelativeLayout>
+						<RelativeLayout
+								android:layout_width="0dp"
+								android:layout_height="fill_parent" android:layout_weight="1"
+								android:layout_marginLeft="8px" android:background="#009A44">
+							<RelativeLayout
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content" android:layout_centerInParent="true">
+								<ImageView android:layout_width="match_parent" android:layout_height="60px"
+										   android:id="@+id/imageView19" android:layout_centerHorizontal="true"
+										   android:scaleType="centerInside" android:src="@drawable/icon_game"/>
+								<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+										  android:text="游戏" android:id="@+id/textView15"
+										  android:layout_centerHorizontal="true" android:layout_below="@+id/imageView19"
+										  android:textColor="#FFFFFF" android:textSize="22px"
+										  android:layout_marginTop="8px"/>
+							</RelativeLayout>
+							<ImageButton
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/btn_game"
+									android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+						</RelativeLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

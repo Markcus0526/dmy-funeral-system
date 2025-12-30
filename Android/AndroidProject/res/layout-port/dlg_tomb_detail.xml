@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="360px"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout"
+				android:background="@drawable/preset_round_white_gray" android:padding="20px">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:paddingBottom="20px">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/main_info_layout">
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="墓碑"
+					android:id="@+id/lbl_tomb" android:textColor="#303030" android:textSize="22px"
+					android:layout_marginLeft="20px"/>
+			<ImageView
+					android:layout_width="120px"
+					android:layout_height="120px"
+					android:id="@+id/img_tomb" android:layout_below="@+id/lbl_tomb"
+					android:background="@drawable/preset_rect_transparent_gray" android:scaleType="centerInside"/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="型号："
+					android:id="@+id/lbl_desc" android:layout_alignTop="@+id/img_tomb"
+					android:layout_toRightOf="@+id/img_tomb" android:layout_marginLeft="10px" android:textColor="#303030"
+					android:textSize="22px"/>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
+					android:id="@+id/txt_desc" android:layout_alignLeft="@+id/lbl_desc"
+					android:layout_below="@+id/lbl_desc" android:maxLines="4" android:textColor="#303030"
+					android:textSize="20px" android:ellipsize="end" android:layout_marginTop="4px"/>
+		</RelativeLayout>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="价格："
+				android:id="@+id/lbl_price" android:layout_below="@+id/main_info_layout"
+				android:layout_marginTop="30px" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_date" android:layout_alignTop="@+id/lbl_price"
+				android:layout_toRightOf="@+id/lbl_price" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="区牌号："
+				android:id="@+id/lbl_no" android:textSize="22px" android:textColor="#303030"
+				android:layout_below="@+id/txt_date" android:layout_marginTop="20px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="AD45-21"
+				android:id="@+id/txt_no" android:layout_alignTop="@+id/lbl_no" android:layout_toRightOf="@+id/lbl_no"
+				android:textColor="#303030" android:textSize="22px"/>
+		<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/operation_layout"
+				android:layout_centerHorizontal="true" android:layout_below="@+id/txt_no"
+				android:layout_marginTop="40px">
+			<Button
+					android:layout_width="130px"
+					android:layout_height="50px"
+					android:text="确认"
+					android:id="@+id/btn_confirm" android:background="@drawable/preset_btn_round_green_green"
+					android:textSize="22px" android:textColor="#FFFFFF"/>
+			<Button
+					android:layout_width="130px"
+					android:layout_height="50px"
+					android:text="取消"
+					android:id="@+id/btn_cancel" android:layout_alignTop="@+id/btn_confirm"
+					android:layout_toRightOf="@+id/btn_confirm" android:layout_marginLeft="40px"
+					android:background="@drawable/preset_btn_round_white_gray" android:textSize="22px"
+					android:textColor="#303030"/>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

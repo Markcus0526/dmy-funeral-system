@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:paddingBottom="20px">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_time" android:textSize="26px" android:textColor="#303030"
+				android:layout_alignLeft="@+id/img_main" android:layout_marginTop="20px"/>
+		<ImageView
+				android:layout_width="420px"
+				android:layout_height="200px"
+				android:id="@+id/img_main" android:layout_below="@+id/txt_time"
+				android:layout_centerHorizontal="true" android:layout_marginTop="10px"
+				android:scaleType="centerInside" android:background="@drawable/preset_rect_transparent_gray"/>
+		<ImageButton
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/btn_item" android:layout_alignTop="@+id/img_main"
+				android:layout_alignLeft="@+id/img_main" android:layout_alignBottom="@+id/img_main"
+				android:layout_alignRight="@+id/img_main"
+				android:background="@drawable/preset_btn_rect_transparent_transparent"
+				android:scaleType="centerInside"/>
+	</RelativeLayout>
+</RelativeLayout>

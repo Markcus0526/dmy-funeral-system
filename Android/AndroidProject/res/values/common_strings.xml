@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="please_wait">请稍候...</string>
+	<string name="app_confirm_exit">再按一次退出程序</string>
+
+	<string name="oper_success">操作成功</string>
+	<string name="oper_failure">操作失败</string>
+
+	<string name="upgrade_notify_title">软件升级</string>
+	<string name="upgrade_notify_message">下载中...</string>
+	<string name="upgrade_error">升级错误</string>
+	<string name="upgrade_success">升级完成</string>
+
+	<string name="no_content">暂无信息</string>
+	<string name="confirm_logout">确定退出当前账号？</string>
+
+	<string name="year">年</string>
+	<string name="month">月</string>
+	<string name="day">日</string>
+
+</resources>
+

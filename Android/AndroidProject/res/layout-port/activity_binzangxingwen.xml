@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+                    android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:text="殡葬新闻" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+                  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+        <ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+                     android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+                     android:src="@drawable/preset_btn_back" android:padding="10px"/>
+        <Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+                android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+                android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+                android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+                android:visibility="invisible"/>
+    </RelativeLayout>
+    <view android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          class="com.damytech.preset_controls.WebContentView" android:id="@+id/web_view"
+          android:visibility="visible" android:layout_below="@+id/title_layout"/>
+</RelativeLayout>

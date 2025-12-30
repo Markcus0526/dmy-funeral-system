@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR" android:padding="10px">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@drawable/preset_rect_transparent_gray"
+			android:id="@+id/content_layout" android:padding="10px">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="名称："
+				android:id="@+id/lbl_name" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_name" android:layout_toRightOf="@+id/lbl_name"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="电话："
+				android:id="@+id/lbl_phone" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_name" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_phone" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_phone" android:layout_toRightOf="@+id/lbl_phone"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="当月累计业绩："
+				android:id="@+id/lbl_monthscore" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_phone" android:layout_marginTop="10px"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Text"
+				  android:id="@+id/txt_monthscore" android:textColor="#303030" android:textSize="22px"
+				  android:layout_alignTop="@+id/lbl_monthscore" android:layout_toRightOf="@+id/lbl_monthscore"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="半年累计业绩："
+				  android:id="@+id/lbl_halfyearscore" android:textColor="#303030" android:textSize="22px"
+				  android:layout_below="@+id/txt_monthscore" android:layout_marginTop="10px"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Text"
+				  android:id="@+id/txt_halfyearscore" android:textColor="#303030" android:textSize="22px"
+				  android:layout_toRightOf="@+id/lbl_halfyearscore" android:layout_alignTop="@+id/lbl_halfyearscore"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="年度累计业绩："
+				  android:id="@+id/lbl_yearscore" android:textColor="#303030" android:textSize="22px"
+				  android:layout_below="@+id/lbl_halfyearscore" android:layout_marginTop="10px"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Text"
+				  android:id="@+id/txt_yearscore" android:textColor="#303030" android:textSize="22px"
+				  android:layout_alignTop="@+id/lbl_yearscore" android:layout_toRightOf="@+id/lbl_yearscore"/>
+	</RelativeLayout>
+</RelativeLayout>

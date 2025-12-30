@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR" android:padding="10px">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:padding="10px"
+			android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="客户名称："
+				android:id="@+id/lbl_name" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_name" android:layout_toRightOf="@+id/lbl_name"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="客户电话："
+				android:id="@+id/lbl_phone" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_name" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_phone" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_phone" android:layout_toRightOf="@+id/lbl_phone"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="预约时间："
+				android:id="@+id/lbl_date" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_phone" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_date" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_date" android:layout_toRightOf="@+id/lbl_date"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/txt_state" android:textColor="#009A44" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_name" android:layout_alignParentRight="true"/>
+		<Button
+				android:layout_width="140px"
+				android:layout_height="40px"
+				android:text="确认带看"
+				android:id="@+id/btn_confirm" android:background="@drawable/preset_btn_round_green_green"
+				android:textColor="#FFFFFF" android:textSize="20px"
+				android:layout_alignTop="@+id/btn_cancel" android:layout_toLeftOf="@+id/btn_cancel"
+				android:layout_marginRight="20px"/>
+		<Button
+				style="?android:attr/buttonStyleSmall"
+				android:layout_width="140px"
+				android:layout_height="40px"
+				android:text="取消带看"
+				android:id="@+id/btn_cancel" android:background="@drawable/preset_btn_round_green_green"
+				android:textColor="#FFFFFF" android:textSize="20px"
+				android:layout_below="@+id/txt_date" android:layout_marginRight="10px" android:layout_marginTop="10px"
+				android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+</RelativeLayout>

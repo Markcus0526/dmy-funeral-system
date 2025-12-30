@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@drawable/preset_rect_white_white"
+				android:id="@+id/parent_layout">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_centerInParent="true"
+			android:id="@+id/content_layout" android:paddingLeft="10px" android:paddingTop="14px"
+			android:paddingRight="10px" android:paddingBottom="14px">
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="40px"
+				android:text="New Text"
+				android:id="@+id/txt_name" android:layout_marginLeft="20px" android:textColor="#303030"
+				android:textSize="24px" android:gravity="center_vertical"/>
+		<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="1px"
+				android:id="@+id/img_sep1" android:layout_marginLeft="20px" android:layout_below="@+id/txt_name"
+				android:background="#707070"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="40px"
+				android:text="区牌号："
+				android:id="@+id/lbl_area" android:textColor="#303030" android:textSize="24px"
+				android:layout_marginLeft="50px"
+				android:layout_below="@+id/txt_name" android:gravity="center_vertical"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="40px"
+				android:text="New Text"
+				android:id="@+id/txt_area" android:textColor="#303030"
+				android:textSize="24px" android:gravity="center_vertical"
+				android:layout_toRightOf="@+id/lbl_area" android:layout_alignTop="@+id/lbl_area"/>
+		<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="1px"
+				android:id="@+id/img_sep2" android:layout_marginLeft="20px" android:layout_below="@+id/txt_area"
+				android:background="#707070"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="40px"
+				android:text="生日："
+				android:id="@+id/lbl_birthday" android:textColor="#303030" android:textSize="24px"
+				android:layout_marginLeft="50px" android:layout_below="@+id/txt_area"
+				android:gravity="center_vertical"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="40px"
+				android:text="New Text"
+				android:id="@+id/txt_birthday" android:textColor="#303030"
+				android:textSize="24px" android:gravity="center_vertical"
+				android:layout_toRightOf="@+id/lbl_birthday" android:layout_alignTop="@+id/lbl_birthday"/>
+		<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="1px"
+				android:id="@+id/img_sep3" android:layout_marginLeft="20px" android:layout_below="@+id/txt_birthday"
+				android:background="#707070"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="40px"
+				android:text="末日："
+				android:id="@+id/lbl_deathday" android:textColor="#303030" android:textSize="24px"
+				android:layout_marginLeft="50px" android:layout_below="@+id/txt_birthday"
+				android:gravity="center_vertical"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="40px"
+				android:text="New Text"
+				android:id="@+id/txt_deathday" android:textColor="#303030"
+				android:textSize="24px" android:gravity="center_vertical"
+				android:layout_toRightOf="@+id/lbl_deathday" android:layout_alignTop="@+id/lbl_deathday"/>
+	</RelativeLayout>
+	<ImageButton
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/btn_item" android:background="@drawable/preset_btn_rect_transparent_transparent"
+			android:layout_alignTop="@+id/content_layout" android:layout_alignLeft="@+id/content_layout"
+			android:layout_alignBottom="@+id/content_layout" android:layout_alignRight="@+id/content_layout"
+			android:visibility="gone"/>
+</RelativeLayout>

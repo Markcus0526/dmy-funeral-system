@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="休假表" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout"
+					android:background="@color/NORMAL_BACKCOLOR">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_above="@+id/operation_layout"
+				android:id="@+id/calendar_layout">
+			<view android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  class="com.damytech.preset_controls.CalendarView" android:id="@+id/calendar_view"
+					/>
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+						  android:layout_height="fill_parent" android:id="@+id/linearLayout">
+				<RelativeLayout android:layout_width="fill_parent" android:layout_height="0dp"
+								android:layout_weight="1">
+					<ImageButton android:layout_width="110px" android:layout_height="70px"
+								 android:id="@+id/btn_prev_month" android:background="@null"
+								 android:layout_alignParentTop="false" android:layout_alignParentLeft="true"
+								 android:src="@drawable/bk_left_arrow" android:scaleType="centerInside"
+								 android:layout_centerVertical="true" android:padding="10px"/>
+					<ImageButton android:layout_width="110px" android:layout_height="70px"
+								 android:id="@+id/btn_next_month" android:background="@null"
+								 android:layout_alignParentRight="true" android:layout_alignParentTop="false"
+								 android:src="@drawable/bk_right_arrow" android:scaleType="centerInside"
+								 android:layout_centerVertical="true" android:padding="10px"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="fill_parent" android:layout_height="0dp"
+								android:layout_weight="5"/>
+			</LinearLayout>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="80px" android:id="@+id/operation_layout"
+				android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+			<Button
+					android:layout_width="160px"
+					android:layout_height="50px"
+					android:text="取消休假"
+					android:id="@+id/btn_cancel_vocation"
+					android:background="@drawable/preset_btn_round_white_gray" android:textSize="22px"
+					android:textColor="#303030"/>
+			<Button
+					android:layout_width="160px"
+					android:layout_height="50px"
+					android:text="申请休假"
+					android:id="@+id/btn_req_vocation" android:layout_toRightOf="@+id/btn_cancel_vocation"
+					android:layout_marginLeft="50px" android:background="@drawable/preset_btn_round_green_green"
+					android:textSize="22px" android:textColor="#FFFFFF"/>
+		</RelativeLayout>
+	</RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="60px" android:id="@+id/tab_header_layout">
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/header_layout">
+			<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="fill_parent" android:layout_weight="1">
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="购墓流程"
+						android:id="@+id/txt_goumuliucheng" android:gravity="center" android:textColor="#FFFFFF"
+						android:textSize="22px"/>
+				<ImageButton
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/btn_goumuliucheng"
+						android:background="@null"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="fill_parent" android:layout_weight="1">
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="注意事项"
+						android:id="@+id/txt_zhuyishixiang" android:gravity="center" android:textColor="#FFFFFF"
+						android:textSize="22px"/>
+				<ImageButton
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/btn_zhuyishixiang"
+						android:background="@null"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="0dp"
+					android:layout_height="fill_parent" android:layout_weight="1">
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="落葬习俗"
+						android:id="@+id/txt_luozangxisu" android:gravity="center" android:textColor="#FFFFFF"
+						android:textSize="22px"/>
+				<ImageButton
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/btn_luozangxisu"
+						android:background="@null"/>
+			</RelativeLayout>
+		</LinearLayout>
+		<ImageView
+				android:layout_width="160px"
+				android:layout_height="4px"
+				android:id="@+id/img_tab_indicator" android:layout_alignParentBottom="true" android:background="#009944"/>
+	</RelativeLayout>
+	<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="2px"
+			android:id="@+id/img_separator" android:layout_below="@+id/tab_header_layout" android:background="#303030"/>
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_below="@+id/img_separator"
+			android:id="@+id/content_layout">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/tab_content1" android:background="@null">
+			<view android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  class="com.damytech.preset_controls.WebContentView" android:id="@+id/web_view1"
+				  android:visibility="visible"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/tab_content2" android:background="@null">
+			<view android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  class="com.damytech.preset_controls.WebContentView" android:id="@+id/web_view2"
+				  android:visibility="visible"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/tab_content3" android:background="@null">
+			<view android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  class="com.damytech.preset_controls.WebContentView" android:id="@+id/web_view3"
+				  android:visibility="visible"/>
+		</RelativeLayout>
+		<view android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  class="com.damytech.preset_controls.HorizontalPager" android:id="@+id/hor_pager"/>
+	</RelativeLayout>
+</RelativeLayout>

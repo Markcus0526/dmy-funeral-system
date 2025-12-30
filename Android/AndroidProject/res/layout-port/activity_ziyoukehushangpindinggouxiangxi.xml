@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="自由客户商品订购详细" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout"
+					android:background="@color/NORMAL_BACKCOLOR">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scroll">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="30px">
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="客户名称："
+						android:id="@+id/lbl_customer" android:textColor="#404040" android:textSize="22px"
+						android:layout_marginLeft="20px" android:layout_marginTop="50px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_customer" android:textColor="#404040" android:textSize="22px"
+						android:layout_alignTop="@+id/lbl_customer" android:layout_toRightOf="@+id/lbl_customer"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="电话："
+						android:id="@+id/lbl_phone" android:textColor="#404040" android:textSize="22px"
+						android:layout_marginLeft="20px" android:layout_marginTop="40px"
+						android:layout_below="@+id/txt_customer"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_phone" android:textColor="#404040" android:textSize="22px"
+						android:layout_alignTop="@+id/lbl_phone" android:layout_toRightOf="@+id/lbl_phone"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="代销商名称："
+						android:id="@+id/lbl_agent" android:textColor="#404040" android:textSize="22px"
+						android:layout_below="@+id/txt_phone" android:layout_marginTop="40px"
+						android:layout_marginLeft="20px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_agent" android:textColor="#404040" android:textSize="22px"
+						android:layout_alignTop="@+id/lbl_agent" android:layout_toRightOf="@+id/lbl_agent"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="预约日期："
+						android:id="@+id/lbl_reserve_date" android:textColor="#404040" android:textSize="22px"
+						android:layout_below="@+id/txt_agent" android:layout_marginLeft="20px"
+						android:layout_marginTop="40px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_reserve_date" android:textColor="#404040" android:textSize="22px"
+						android:layout_alignTop="@+id/lbl_reserve_date" android:layout_toRightOf="@+id/lbl_reserve_date"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="服务类型："
+						android:id="@+id/lbl_service" android:textColor="#404040" android:textSize="22px"
+						android:layout_below="@+id/txt_reserve_date" android:layout_marginTop="40px"
+						android:layout_marginLeft="20px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_service" android:textColor="#404040" android:textSize="22px"
+						android:layout_alignTop="@+id/lbl_service" android:layout_toRightOf="@+id/lbl_service"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="祭品目录："
+						android:id="@+id/lbl_products" android:textColor="#404040" android:textSize="26px"
+						android:layout_marginLeft="20px"
+						android:layout_marginTop="40px" android:textStyle="bold"
+						android:layout_below="@+id/txt_service"/>
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:id="@+id/products_layout"
+						android:layout_below="@+id/lbl_products" android:layout_marginTop="20px"
+						android:layout_alignLeft="@+id/lbl_products">
+				</LinearLayout>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="当前状态："
+						android:id="@+id/lbl_state" android:textColor="#404040" android:textSize="22px"
+						android:layout_marginLeft="20px"
+						android:layout_marginTop="40px" android:layout_below="@+id/products_layout"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_state" android:textColor="#009944" android:textSize="22px"
+						android:layout_toRightOf="@+id/lbl_state" android:layout_alignTop="@+id/lbl_state"/>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

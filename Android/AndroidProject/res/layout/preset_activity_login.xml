@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/main_scrollview">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/scroll_content_layout">
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="800px"
+					android:id="@+id/img_back" android:scaleType="fitXY" android:src="#ffffffff"/>
+			<RelativeLayout
+					android:layout_width="300px"
+					android:layout_height="300px" android:id="@+id/logo_layout" android:layout_centerHorizontal="true"
+					android:layout_marginTop="80px">
+				<ImageView
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:id="@+id/imgLogo" android:src="@drawable/preset_logo" android:visibility="visible"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="266px"
+					android:layout_height="60px" android:layout_centerHorizontal="true"
+					android:id="@+id/username_layout" android:layout_below="@+id/logo_layout"
+					android:layout_marginTop="65px" android:background="@drawable/preset_round_transparent_gray">
+				<ImageView
+						android:layout_width="70px"
+						android:layout_height="match_parent"
+						android:id="@+id/img_user" android:scaleType="centerInside"
+						android:src="@drawable/icon_account"/>
+				<EditText
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/edt_account" android:layout_toRightOf="@+id/img_user" android:background="@null"
+						android:paddingRight="20px" android:paddingLeft="10px" android:textColor="#ff3b3b3b"
+						android:textSize="22px" android:inputType="text" android:maxLength="20"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="266px"
+					android:layout_height="60px" android:layout_centerHorizontal="true"
+					android:id="@+id/password_layout" android:layout_below="@+id/username_layout"
+					android:layout_marginTop="30px" android:background="@drawable/preset_round_transparent_gray">
+				<ImageView
+						android:layout_width="70px"
+						android:layout_height="match_parent"
+						android:id="@+id/img_pwd" android:scaleType="centerInside" android:src="@drawable/icon_pwd"/>
+				<EditText
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/edt_password" android:layout_toRightOf="@+id/img_pwd" android:background="@null"
+						android:paddingRight="20px" android:paddingLeft="10px" android:textColor="#3b3b3b"
+						android:textSize="22px" android:inputType="textPassword" android:maxLength="16"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/operation_layout"
+					android:layout_below="@+id/password_layout" android:layout_alignLeft="@+id/password_layout"
+					android:layout_alignRight="@+id/password_layout" android:layout_marginTop="30px">
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="60px" android:focusable="false" android:id="@+id/btn_layout">
+					<ImageView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/img_bk" android:background="@drawable/preset_round_yellow_yellow"
+							android:alpha="0.7"/>
+					<Button
+							android:layout_width="match_parent"
+							android:layout_height="60px"
+							android:text="登录"
+							android:id="@+id/btn_login" android:background="@drawable/preset_btn_round_transparent_transparent" android:textColor="#FFFFFF"
+							android:textSize="22px"/>
+				</RelativeLayout>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/pwdoption_layout"
+					android:layout_below="@+id/operation_layout" android:layout_centerHorizontal="true">
+				<ImageView android:layout_width="wrap_content" android:layout_height="2px"
+						   android:id="@+id/img_underline" android:background="#888888"
+						   android:layout_alignBottom="@+id/txt_forgot_pwd"
+						   android:layout_alignLeft="@+id/txt_forgot_pwd"
+						   android:layout_alignRight="@+id/txt_forgot_pwd" android:layout_marginBottom="10px"/>
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="忘记密码"
+						  android:id="@+id/txt_forgot_pwd"
+						  android:gravity="center_vertical" android:textSize="22px" android:textColor="#888888"
+						  android:paddingLeft="10px" android:paddingRight="10px"
+						  android:layout_toRightOf="@+id/btn_remember" android:layout_alignTop="@+id/btn_remember"
+						  android:layout_alignBottom="@+id/btn_remember" android:layout_marginLeft="130px"/>
+				<view class="com.damytech.preset_controls.CheckButton" android:layout_width="wrap_content"
+					  android:layout_height="wrap_content" android:id="@+id/btn_remember"
+					  android:layout_marginTop="10px"
+						>
+				</view>
+			</RelativeLayout>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

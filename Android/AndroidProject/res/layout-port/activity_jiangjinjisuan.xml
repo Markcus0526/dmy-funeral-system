@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="奖金计算" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scroll">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content"
+					android:paddingBottom="50px">
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="60px" android:id="@+id/price_layout"
+						android:layout_marginLeft="30px" android:layout_marginRight="30px"
+						android:layout_marginTop="50px" android:background="@drawable/preset_round_transparent_gray"
+						android:paddingLeft="20px" android:paddingRight="20px">
+					<TextView
+							android:layout_width="130px"
+							android:layout_height="match_parent"
+							android:text="价格："
+							android:id="@+id/lbl_price" android:gravity="center_vertical"
+							android:textSize="24px" android:textColor="#303030"/>
+					<EditText
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/edt_price" android:background="@null" android:textColor="#303030"
+							android:textSize="24px" android:inputType="numberDecimal"
+							android:layout_toRightOf="@+id/lbl_price" android:layout_toLeftOf="@+id/lbl_price_unit"
+							android:paddingLeft="4px" android:maxLength="10" android:paddingRight="4px"/>
+					<TextView
+							android:layout_width="50px"
+							android:layout_height="match_parent"
+							android:text="元"
+							android:id="@+id/lbl_price_unit" android:layout_alignParentRight="true"
+							android:textColor="#303030" android:textSize="24px" android:gravity="center"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="60px" android:id="@+id/discount_layout"
+						android:layout_marginLeft="30px" android:layout_marginRight="30px"
+						android:layout_marginTop="40px" android:layout_below="@+id/price_layout"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px">
+					<TextView
+							android:layout_width="130px"
+							android:layout_height="match_parent"
+							android:text="折扣："
+							android:id="@+id/lbl_discount" android:gravity="center_vertical"
+							android:textSize="24px" android:textColor="#303030"/>
+					<EditText android:layout_width="match_parent" android:layout_height="match_parent"
+							  android:id="@+id/edt_discount" android:background="@null" android:textColor="#303030"
+							  android:textSize="24px" android:inputType="numberDecimal"
+							  android:layout_toLeftOf="@+id/lbl_discount_unit"
+							  android:layout_toRightOf="@+id/lbl_discount" android:paddingLeft="4px"
+							  android:maxLength="3" android:paddingRight="4px"/>
+					<TextView
+							android:layout_width="50px"
+							android:layout_height="match_parent"
+							android:text="%"
+							android:id="@+id/lbl_discount_unit" android:layout_alignParentRight="true"
+							android:textColor="#303030" android:textSize="24px" android:gravity="center"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="wrap_content"
+						android:layout_height="fill_parent"
+						android:layout_marginTop="40px"
+						android:layout_below="@+id/discount_layout" android:id="@+id/operation_layout"
+						android:layout_centerHorizontal="true">
+					<RelativeLayout
+							android:layout_width="180px"
+							android:layout_height="60px" android:id="@+id/calc_layout"
+							android:background="@drawable/preset_round_green_green">
+						<ImageView
+								android:layout_width="50px"
+								android:layout_height="match_parent"
+								android:id="@+id/img_calc" android:layout_marginLeft="24px"
+								android:src="@drawable/bk_jisuanji" android:scaleType="centerInside"
+								android:padding="14px"/>
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="match_parent"
+								android:text="计算"
+								android:id="@+id/lbl_calc" android:gravity="center" android:textColor="#FFFFFF"
+								android:textSize="26px" android:layout_toRightOf="@+id/img_calc"/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_calc"
+								android:background="@drawable/preset_btn_round_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="180px"
+							android:layout_height="60px" android:id="@+id/reset_layout"
+							android:background="@drawable/preset_round_green_green" android:layout_marginLeft="30px"
+							android:layout_toRightOf="@+id/calc_layout">
+						<ImageView
+								android:layout_width="50px"
+								android:layout_height="match_parent"
+								android:id="@+id/img_reset" android:layout_marginLeft="24px"
+								android:src="@drawable/preset_bk_refresh" android:scaleType="centerInside"
+								android:padding="10px"/>
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="match_parent"
+								android:text="重置"
+								android:id="@+id/lbl_reset" android:gravity="center" android:textColor="#FFFFFF"
+								android:textSize="26px" android:layout_toRightOf="@+id/img_reset"/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_reset"
+								android:background="@drawable/preset_btn_round_transparent_transparent"
+								/>
+					</RelativeLayout>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="60px" android:id="@+id/no_tax_layout"
+						android:layout_marginLeft="30px" android:layout_marginRight="30px"
+						android:layout_marginTop="50px" android:layout_below="@+id/operation_layout"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px">
+					<TextView
+							android:layout_width="130px"
+							android:layout_height="match_parent"
+							android:text="奖金未税："
+							android:id="@+id/lbl_notax" android:gravity="center_vertical"
+							android:textSize="24px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/txt_notax" android:gravity="center_vertical" android:textColor="#303030"
+							android:textSize="24px" android:layout_toRightOf="@+id/lbl_notax"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="60px" android:id="@+id/tax_layout"
+						android:layout_marginLeft="30px" android:layout_marginRight="30px"
+						android:layout_marginTop="40px" android:layout_below="@+id/no_tax_layout"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px">
+					<TextView
+							android:layout_width="130px"
+							android:layout_height="match_parent"
+							android:text="奖金含税："
+							android:id="@+id/lbl_tax" android:gravity="center_vertical"
+							android:textSize="24px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/txt_tax" android:gravity="center_vertical" android:textColor="#303030"
+							android:textSize="24px" android:layout_toRightOf="@+id/lbl_tax"/>
+				</RelativeLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

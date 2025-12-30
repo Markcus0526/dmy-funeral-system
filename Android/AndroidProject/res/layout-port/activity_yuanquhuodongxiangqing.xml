@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@color/NORMAL_BACKCOLOR">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="园区活动详情" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<ImageButton
+				android:layout_width="70px"
+				android:layout_height="match_parent"
+				android:id="@+id/btn_shopcart" android:layout_alignParentRight="true" android:background="@null"
+				android:scaleType="centerInside" android:src="@drawable/icon_shopcart" android:padding="13px"
+				android:visibility="gone"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scrollview">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/main_layout" android:paddingBottom="40px">
+				<TextView
+						android:layout_width="400px"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_activity_title" android:layout_centerHorizontal="true"
+						android:layout_marginTop="30px" android:textColor="#303030" android:textSize="26px"
+						android:textStyle="bold" android:gravity="center"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_time" android:layout_below="@+id/txt_activity_title"
+						android:layout_alignParentRight="true" android:layout_marginRight="30px"
+						android:textColor="#404040" android:textSize="22px" android:layout_marginTop="10px"/>
+				<ImageView
+						android:layout_width="400px"
+						android:layout_height="200px"
+						android:id="@+id/imgMain" android:layout_centerHorizontal="true"
+						android:layout_below="@+id/txt_time" android:layout_marginTop="20px"
+						android:background="@drawable/preset_rect_white_gray" android:scaleType="fitXY"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="活动时间："
+						android:id="@+id/lbl_act_time" android:textColor="#404040" android:textSize="24px"
+						android:layout_below="@+id/imgMain" android:layout_marginTop="40px"
+						android:layout_marginLeft="20px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_act_time" android:textSize="24px" android:textColor="#404040"
+						android:layout_alignTop="@+id/lbl_act_time" android:layout_toRightOf="@+id/lbl_act_time"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="活动内容："
+						android:id="@+id/lbl_act_contents" android:textSize="24px" android:textColor="#404040"
+						android:layout_below="@+id/lbl_act_time"
+						android:layout_marginTop="20px" android:layout_marginLeft="20px"/>
+				<view
+						android:layout_width="440px"
+						android:layout_height="wrap_content"
+						class="com.damytech.preset_controls.WebContentView"
+						android:id="@+id/wv_act_contents"
+						android:layout_centerHorizontal="true" android:layout_below="@+id/lbl_act_contents"
+						android:layout_marginTop="10px"/>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+	<style name="TransStyle_Theme" parent = "android:Theme.Translucent.NoTitleBar">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+</resources>

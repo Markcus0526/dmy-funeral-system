@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:paddingTop="10px"
+			android:paddingBottom="10px">
+		<ImageView
+				android:layout_width="440px"
+				android:layout_height="200px"
+				android:id="@+id/img_main" android:layout_centerHorizontal="true"
+				android:background="@drawable/preset_rect_transparent_gray" android:scaleType="centerInside"/>
+	</RelativeLayout>
+</RelativeLayout>

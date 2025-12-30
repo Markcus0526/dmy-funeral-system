@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="60px" android:id="@+id/parent_layout">
+
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent" android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item1" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item2" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item3" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item4" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item5" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item6" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="160px"
+				android:layout_height="match_parent"
+				android:text="New Text"
+				android:id="@+id/lbl_item7" android:textColor="#303030" android:textSize="22px"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView android:layout_width="160px" android:layout_height="match_parent" android:text="New Text"
+				  android:id="@+id/lbl_item8" android:textColor="#303030" android:textSize="22px"
+				  android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"/>
+	</LinearLayout>
+</RelativeLayout>

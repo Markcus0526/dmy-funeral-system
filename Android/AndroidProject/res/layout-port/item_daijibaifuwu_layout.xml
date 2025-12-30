@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout" android:background="#FFFFFF"
+				android:paddingBottom="20px">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout">
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="代祭拜服务"
+				android:id="@+id/txt_title" android:layout_marginTop="30px" android:layout_marginLeft="30px"
+				android:textColor="#404040" android:textSize="24px" android:layout_marginRight="30px"/>
+		<view android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  class="com.damytech.preset_controls.WebContentView" android:id="@+id/wv_contents"
+			  android:layout_below="@+id/txt_title"
+			  android:layout_marginTop="20px"
+			  android:layout_marginLeft="20px"
+			  android:layout_marginRight="20px"
+			  android:visibility="visible"/>
+	</RelativeLayout>
+</RelativeLayout>

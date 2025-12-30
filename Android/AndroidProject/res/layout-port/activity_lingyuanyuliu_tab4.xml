@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout
+			android:layout_width="440px"
+			android:layout_height="wrap_content" android:id="@+id/area_layout" android:layout_marginTop="20px"
+			android:layout_centerHorizontal="true" android:visibility="gone">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="园区选择"
+				android:id="@+id/lbl_select_area" android:textColor="#303030" android:textSize="24px"
+				android:layout_alignLeft="@+id/btn_area"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="50px"
+				android:id="@+id/txt_area" android:textColor="#303030" android:textSize="24px"
+				android:layout_below="@+id/lbl_select_area" android:layout_centerHorizontal="true"
+				android:gravity="center_vertical" android:paddingLeft="20px"
+				android:background="@drawable/preset_round_white_gray"/>
+		<ImageView
+				android:layout_width="50px"
+				android:layout_height="wrap_content"
+				android:id="@+id/img_arrow1" android:layout_alignTop="@+id/txt_area"
+				android:layout_alignRight="@+id/txt_area" android:layout_alignBottom="@+id/txt_area"
+				android:scaleType="centerInside" android:src="@drawable/bk_down_arrow" android:padding="10px"/>
+		<ImageButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/btn_area" android:layout_alignTop="@+id/txt_area"
+				android:layout_alignLeft="@+id/txt_area" android:layout_alignBottom="@+id/txt_area"
+				android:layout_alignRight="@+id/txt_area"
+				android:background="@drawable/preset_btn_round_transparent_transparent"/>
+	</RelativeLayout>
+	<RelativeLayout
+			android:layout_width="440px"
+			android:layout_height="match_parent" android:id="@+id/image_layout"
+			android:layout_centerHorizontal="true" android:layout_above="@+id/label_layout"
+			android:layout_below="@+id/area_layout" android:layout_marginTop="20px" android:layout_marginBottom="20px"
+			android:visibility="gone">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="园区排位图片"
+				android:id="@+id/lbl_image" android:textColor="#303030" android:textSize="24px"
+				/>
+		<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/img_area" android:layout_centerHorizontal="true"
+				android:layout_below="@+id/lbl_image"
+				android:background="@drawable/preset_rect_transparent_gray" android:scaleType="centerInside"/>
+	</RelativeLayout>
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="440px"
+			android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+			android:id="@+id/label_layout" android:layout_above="@+id/parts_layout">
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="区名"
+				android:id="@+id/textView32" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="bottom|center_horizontal" android:paddingBottom="10px"/>
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="排号"
+				android:id="@+id/textView33" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="bottom|center_horizontal" android:paddingBottom="10px"/>
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="列号"
+				android:id="@+id/textView34" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="bottom|center_horizontal" android:paddingBottom="10px"/>
+	</LinearLayout>
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="440px"
+			android:layout_height="500px" android:id="@+id/parts_layout"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="50px" android:layout_above="@+id/operation_layout">
+		<view android:layout_width="0dp"
+			  android:layout_height="wrap_content"
+			  class="com.damytech.preset_controls.WheelPicker.WheelView" android:id="@+id/part_view"
+			  android:layout_weight="1"/>
+		<view android:layout_width="0dp"
+			  android:layout_height="wrap_content"
+			  class="com.damytech.preset_controls.WheelPicker.WheelView" android:id="@+id/row_view"
+			  android:layout_weight="1"/>
+		<view android:layout_width="0dp"
+			  android:layout_height="wrap_content"
+			  class="com.damytech.preset_controls.WheelPicker.WheelView" android:id="@+id/index_view"
+			  android:layout_weight="1"/>
+	</LinearLayout>
+	<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+					android:layout_marginBottom="20px" android:id="@+id/operation_layout">
+		<Button android:layout_width="160px" android:layout_height="50px" android:text="上一步" android:id="@+id/btn_prev"
+				android:background="@drawable/preset_btn_round_green_green" android:textSize="24px"
+				android:textColor="#FFFFFF"/>
+		<Button android:layout_width="160px" android:layout_height="50px" android:text="确认保留" android:id="@+id/btn_next"
+				android:background="@drawable/preset_btn_round_green_green" android:textSize="24px"
+				android:textColor="#FFFFFF" android:layout_toRightOf="@+id/btn_prev" android:layout_marginLeft="50px"/>
+	</RelativeLayout>
+</RelativeLayout>

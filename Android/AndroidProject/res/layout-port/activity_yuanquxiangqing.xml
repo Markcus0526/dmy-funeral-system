@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="园区详情"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scrollview">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:paddingBottom="20px">
+				<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content" android:id="@+id/rlContent">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="园区"
+							android:id="@+id/txtTitle" android:layout_alignParentTop="true" android:layout_alignParentLeft="false"
+							android:textColor="#303030"
+							android:textSize="28px" android:layout_centerHorizontal="true" android:layout_marginTop="20px"/>
+					<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="园区介绍"
+							  android:id="@+id/textView2" android:layout_alignParentTop="false"
+							  android:layout_alignParentLeft="false" android:textColor="#303030" android:textSize="28px"
+							  android:layout_marginTop="20px"
+							  android:layout_below="@+id/txtTitle" android:layout_alignParentBottom="false"
+							  android:layout_marginLeft="20px"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:id="@+id/txtContent" android:layout_below="@+id/textView2" android:layout_alignParentBottom="false"
+							android:layout_alignParentRight="false" android:textSize="25px" android:textColor="#303030"
+							android:ellipsize="end" android:maxLines="7"
+							android:layout_margin="15px"/>
+				</RelativeLayout>
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@+id/rlContent"
+						android:layout_marginTop="20px" android:id="@+id/products_layout">
+				</LinearLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

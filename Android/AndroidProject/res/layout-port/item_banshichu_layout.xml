@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/item_layout" android:background="#FFFFFF"
+                android:paddingLeft="10px" android:paddingTop="10px" android:paddingRight="10px"
+                android:paddingBottom="3px">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_layout" android:padding="10px">
+        <ImageView
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/imageView" android:src="@drawable/preset_def_image"
+                android:background="@drawable/preset_rect_transparent_gray" android:scaleType="fitCenter"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_detail" android:layout_alignTop="@+id/imageView"
+                android:layout_alignLeft="@+id/imageView" android:layout_alignBottom="@+id/imageView"
+                android:layout_alignRight="@+id/imageView"
+                android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txtName" android:layout_toRightOf="@+id/imageView" android:layout_marginLeft="30px"
+                  android:textColor="#303030" android:textSize="25px" android:text="aaaa"/>
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_toRightOf="@+id/imageView"
+                android:layout_below="@+id/txtName" android:layout_marginTop="15px" android:id="@+id/rlAddress"
+                android:paddingLeft="5px">
+            <ImageView
+                    android:layout_width="38px"
+                    android:layout_height="38px"
+                    android:id="@+id/iconAddr" android:layout_marginLeft="10px"
+                    android:src="@drawable/icon_addr" android:scaleType="centerInside"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txt_title"
+                      android:layout_toRightOf="@+id/iconAddr" android:textColor="#303030"
+                      android:textSize="20px" android:text="地址："
+                      android:layout_marginTop="8px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/txtAddress" android:layout_toRightOf="@+id/txt_title" android:textColor="#303030"
+                      android:textSize="20px" android:layout_marginRight="20px"
+                      android:ellipsize="end" android:layout_marginTop="8px"
+                    />
+			<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="1px"
+					android:id="@+id/imageView38" android:background="#303030"
+					android:layout_alignBottom="@+id/txtAddress" android:layout_alignLeft="@+id/txt_title"
+					android:layout_alignRight="@+id/txtAddress"/>
+			<ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_addr" android:layout_alignTop="@+id/iconAddr"
+                    android:layout_alignLeft="@+id/iconAddr" android:layout_alignRight="@+id/txtAddress"
+                    android:layout_alignBottom="@+id/iconAddr" android:background="@null"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="45px"
+                        android:layout_toRightOf="@+id/imageView" android:layout_below="@+id/rlAddress"
+                        android:layout_marginTop="5px" android:id="@+id/relativeLayout">
+            <ImageView android:layout_width="45px" android:layout_height="45px" android:id="@+id/imageView3"
+                       android:layout_marginLeft="10px" android:src="@drawable/icon_phone"
+                       android:layout_centerVertical="true" android:scaleType="centerInside"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/textView2" android:layout_toRightOf="@+id/imageView3" android:textColor="#303030"
+                      android:textSize="20px" android:text="电话：" android:layout_centerVertical="true"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/txtPhone" android:layout_toRightOf="@+id/textView2" android:textColor="#303030"
+                      android:textSize="20px" android:layout_centerVertical="true" android:ellipsize="end"/>
+			<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="1px"
+					android:id="@+id/imageView39" android:background="#303030"
+					android:layout_alignBottom="@+id/txtPhone" android:layout_alignRight="@+id/txtPhone"
+					android:layout_alignLeft="@+id/textView2"/>
+			<ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_phone" android:layout_alignTop="@+id/imageView3"
+                    android:layout_alignLeft="@+id/imageView3" android:layout_alignRight="@+id/txtPhone"
+                    android:layout_alignBottom="@+id/imageView3" android:background="@null"/>
+        </RelativeLayout>
+        <ImageView
+                android:layout_width="20px"
+                android:layout_height="40px"
+                android:id="@+id/imageView4" android:src="@drawable/bk_right_arrow" android:scaleType="fitXY"
+                android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

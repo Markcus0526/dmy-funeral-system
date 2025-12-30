@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout" android:background="#FFFFFF">
+
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="60px" android:id="@+id/navigation_layout">
+		<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent" android:layout_weight="9">
+			<ImageView
+					android:layout_width="40px"
+					android:layout_height="match_parent"
+					android:id="@+id/img_flower" android:scaleType="centerInside"
+					android:src="@drawable/bk_radio_sel"/>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="鲜花"
+					android:id="@+id/txt_flowers" android:textColor="#303030" android:textSize="20px"
+					android:gravity="center_vertical" android:layout_toRightOf="@+id/img_flower"/>
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_flowers" android:background="@null"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent" android:layout_weight="12">
+			<ImageView
+					android:layout_width="40px"
+					android:layout_height="match_parent"
+					android:id="@+id/img_burial" android:scaleType="centerInside"
+					android:src="@drawable/bk_radio_normal"/>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="随葬品"
+					android:id="@+id/txt_burial" android:textColor="#303030" android:textSize="20px"
+					android:gravity="center_vertical" android:layout_toRightOf="@+id/img_burial"/>
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_burials" android:background="@null"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent" android:layout_weight="14">
+			<ImageView
+					android:layout_width="40px"
+					android:layout_height="match_parent"
+					android:id="@+id/img_meal" android:scaleType="centerInside"
+					android:src="@drawable/bk_radio_normal"/>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="供饭/水果"
+					android:id="@+id/txt_meal" android:textColor="#303030" android:textSize="20px"
+					android:gravity="center_vertical" android:layout_toRightOf="@+id/img_meal"/>
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_meal" android:background="@null"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="fill_parent" android:layout_weight="10">
+			<ImageView
+					android:layout_width="40px"
+					android:layout_height="match_parent"
+					android:id="@+id/img_others" android:scaleType="centerInside"
+					android:src="@drawable/bk_radio_normal"/>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:text="其他"
+					android:id="@+id/txt_others" android:textColor="#303030" android:textSize="20px"
+					android:gravity="center_vertical" android:layout_toRightOf="@+id/img_others"/>
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_others" android:background="@null"/>
+		</RelativeLayout>
+	</LinearLayout>
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:id="@+id/data_layout"
+			android:layout_below="@+id/navigation_layout">
+		<ListView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="#505050" android:dividerHeight="1px"
+				android:id="@+id/list_flowers" android:cacheColorHint="#E0E0E0"/>
+		<ListView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="#505050" android:dividerHeight="1px"
+				android:id="@+id/list_burials" android:cacheColorHint="#E0E0E0" android:visibility="invisible"/>
+		<ListView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="#505050" android:dividerHeight="1px"
+				android:id="@+id/list_meal" android:cacheColorHint="#E0E0E0" android:visibility="invisible"/>
+		<ListView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:divider="#505050" android:dividerHeight="1px"
+				android:id="@+id/list_others" android:cacheColorHint="#E0E0E0" android:visibility="invisible"/>
+	</RelativeLayout>
+</RelativeLayout>

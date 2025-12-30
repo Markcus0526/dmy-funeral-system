@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR"
+				android:id="@+id/parent_layout"
+		>
+
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout"
+			android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="办事处"
+				android:id="@+id/lbl_office" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="center_horizontal" android:paddingTop="10px"
+				android:paddingBottom="10px" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="名称"
+				android:id="@+id/lbl_name" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="center_horizontal" android:paddingTop="10px"
+				android:paddingBottom="10px" android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="年度业绩"
+				android:id="@+id/lbl_score" android:layout_weight="1" android:textColor="#303030"
+				android:textSize="22px" android:gravity="center_horizontal" android:paddingTop="10px"
+				android:paddingBottom="10px" android:background="@drawable/preset_rect_transparent_gray"/>
+	</LinearLayout>
+</RelativeLayout>

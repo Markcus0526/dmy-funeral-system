@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/item_layout" android:background="#FFFFFF"
+                android:paddingLeft="10px" android:paddingTop="10px" android:paddingRight="10px"
+                android:paddingBottom="3px">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="@drawable/preset_round_white_gray"
+            android:id="@+id/content_layout" android:padding="10px">
+        <ImageView
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/imageView" android:background="@drawable/preset_rect_transparent_gray"
+				android:scaleType="centerInside"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="墓碑名称："
+                android:id="@+id/txt_title" android:layout_toRightOf="@+id/imageView" android:layout_marginLeft="10px"
+                android:textColor="#303030" android:textSize="22px"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txtName" android:layout_toRightOf="@+id/txt_title" android:layout_marginLeft="10px"
+                  android:textColor="#303030" android:textSize="22px"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="由来："
+                  android:id="@+id/textView2" android:layout_toRightOf="@+id/imageView" android:layout_marginLeft="10px"
+                  android:textColor="#303030" android:textSize="22px" android:layout_below="@+id/txtName"
+                  android:layout_marginTop="10px"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/txtOrigin"
+                  android:layout_toRightOf="@+id/textView2" android:layout_marginLeft="10px" android:textColor="#303030"
+                  android:textSize="22px" android:layout_alignTop="@+id/textView2" android:maxLines="2"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="价钱："
+                  android:id="@+id/textView3" android:layout_toRightOf="@+id/imageView" android:layout_marginLeft="10px"
+                  android:textColor="#303030" android:textSize="22px" android:layout_below="@+id/txtOrigin"
+                  android:layout_marginTop="10px"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtPrice"
+                  android:layout_toRightOf="@+id/textView3" android:layout_marginLeft="10px" android:textColor="#303030"
+                  android:textSize="22px" android:layout_alignTop="@+id/textView3"/>
+    </RelativeLayout>
+</RelativeLayout>

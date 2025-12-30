@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@color/NORMAL_BACKCOLOR"
+				android:id="@+id/tab_content_layout">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/user_layout" android:paddingTop="30px"
+			android:paddingBottom="30px">
+		<RelativeLayout
+				android:layout_width="400px"
+				android:layout_height="60px" android:id="@+id/name_layout"
+				android:layout_centerHorizontal="true" android:background="@drawable/preset_round_transparent_gray">
+			<TextView
+					android:layout_width="140px"
+					android:layout_height="match_parent"
+					android:text="购买人姓名："
+					android:id="@+id/lbl_name" android:textColor="#303030"
+					android:textSize="22px" android:layout_marginLeft="10px" android:gravity="left|center_vertical"/>
+			<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/edt_name" android:background="@null" android:textColor="#303030"
+					android:textSize="22px" android:layout_toRightOf="@+id/lbl_name" android:inputType="text"
+					android:paddingLeft="10px" android:paddingRight="10px" android:gravity="center_vertical"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="400px"
+				android:layout_height="60px" android:id="@+id/phone_layout"
+				android:layout_below="@+id/name_layout" android:layout_marginTop="20px"
+				android:layout_centerHorizontal="true" android:background="@drawable/preset_round_transparent_gray">
+			<TextView
+					android:layout_width="140px"
+					android:layout_height="match_parent"
+					android:text="手机号码："
+					android:id="@+id/lbl_phone" android:textColor="#303030"
+					android:textSize="22px" android:layout_marginLeft="10px" android:gravity="left|center_vertical"/>
+			<EditText
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/edt_phone" android:background="@null" android:textColor="#303030"
+					android:textSize="22px" android:layout_toRightOf="@+id/lbl_phone" android:inputType="phone"
+					android:paddingLeft="10px" android:paddingRight="10px" android:gravity="center_vertical"/>
+		</RelativeLayout>
+	</RelativeLayout>
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/selector_rel_layout" android:layout_below="@+id/user_layout"
+			android:layout_above="@+id/daijibai_layout" android:layout_marginBottom="20px">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="预约时间："
+				android:id="@+id/lbl_reserve_time"
+				android:layout_above="@+id/selector_layout" android:layout_alignLeft="@+id/selector_layout"
+				android:textColor="#303030" android:textSize="24px"/>
+		<LinearLayout android:orientation="horizontal" android:layout_width="420px" android:layout_height="wrap_content"
+					  android:id="@+id/selector_layout"
+					  android:layout_centerInParent="true">
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/year_view" android:layout_weight="1"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/month_view" android:layout_weight="1"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/day_view" android:layout_weight="1"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/time_view" android:layout_weight="1"/>
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/daijibai_layout"
+			android:layout_alignParentBottom="false" android:layout_above="@+id/operation_layout"
+			android:layout_marginBottom="20px">
+		<view android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  class="com.damytech.preset_controls.CheckButton" android:id="@+id/btn_daijibai" android:layout_marginLeft="50px"
+				/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="是否代祭拜"
+				android:id="@+id/textView142" android:textColor="#303030" android:textSize="24px"
+				android:enabled="false" android:gravity="center_vertical" android:layout_alignTop="@+id/btn_daijibai"
+				android:layout_alignBottom="@+id/btn_daijibai" android:layout_toRightOf="@+id/btn_daijibai"/>
+	</RelativeLayout>
+	<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/operation_layout"
+			android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"
+			android:layout_marginBottom="30px">
+		<Button
+				android:layout_width="160px"
+				android:layout_height="50px"
+				android:text="取消"
+				android:id="@+id/btn_cancel"
+				android:background="@drawable/preset_btn_round_white_gray" android:textSize="24px"
+				android:textColor="#404040"/>
+		<Button
+				android:layout_width="160px"
+				android:layout_height="54px"
+				android:text="下一步"
+				android:id="@+id/btn_next"
+				android:layout_toRightOf="@+id/btn_cancel" android:layout_marginLeft="40px"
+				android:background="@drawable/preset_btn_round_green_green" android:textSize="24px"
+				android:textColor="#FFFFFF"/>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="com.damytech.binzang"
+		  android:versionCode="1"
+		  android:versionName="1.0">
+
+	<uses-sdk android:minSdkVersion="14"/>
+
+	<permission
+			android:name="com.damytech.binzang.permission.JPUSH_MESSAGE"
+			android:protectionLevel="signature" />
+
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+	<!-- Required  一些系统要求的权限，如访问网络等-->
+	<uses-permission android:name="com.damytech.binzang.permission.JPUSH_MESSAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+
+	<!-- Optional for location -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+	<!-- Optional for navigation -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_GPS" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<!-- 来电消音 -->
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+	<application android:label="@string/app_name"
+				 android:icon="@drawable/ic_launcher"
+				 android:theme="@android:style/Theme.NoTitleBar"
+				 android:name="com.damytech.binzang.application.MainApplication">
+
+		<service android:name="com.baidu.location.f"
+				 android:enabled="true"
+				 android:process=":remote"/>
+
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="aB2N7R9buFVvLNPXapPtOBkY" />
+
+
+		<activity android:name=".activities.preset.PresetLogoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"
+				  android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".activities.preset.PresetLoginActivity"
+				  android:screenOrientation="portrait"
+				  android:configChanges="orientation|keyboardHidden"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.preset.PresetVideoPlayerActivity"
+				  android:screenOrientation="landscape"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.preset.PresetSelectPhotoActivity"
+				  android:screenOrientation="portrait"
+				  android:theme="@style/TransStyle_Theme"
+				  android:windowSoftInputMode="stateHidden"/>
+
+
+		<!-- User custom activities -->
+		<activity android:name=".activities.custom.FangKeShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.GongSiJianJieActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZhengQuQuanJingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name=".activities.custom.YuanQuXiangQingActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ShouHouFuWuActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BanShiChuChengShiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BanShiChuJieShaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BanShiChuXiangQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.SanLiuJingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BNavigatorActivity"
+				  android:screenOrientation="portrait"
+				  android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BinZangZhiShiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YiTiaoLongFuWuActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ShengHuoFuWuActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YuYueCanGuanActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YiTiaoLongFuWuGongSiXiangQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.MeiShiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.JiuDianActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DianYingShiKeBiaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ChuXingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.KaoShiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.QiPanShanJingDianActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.QiPanShanJingDianXiangXiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YouXiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.SanLiuJingJieShaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.JiuKeHuShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YuanGongShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiXiaoShangShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZhuRenShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.LingDaoShouYeActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.WangJiMiMaActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+
+
+		<activity android:name=".activities.custom.YuanQuHuoDongActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YuanQuHuoDongXiangQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.QinRenShuJuChaXunActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZhangDanChaXunActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZhangDanXiangQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiJiBaiHuiHanActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiJiBaiXiangQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.FuWuRenYuanActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YiShiYuYueActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.HuoDongJiPinGouMaiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.QueRenZhiFuActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.JiangJinJiSuanActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.JiangJinMingXiBiaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DingJinDanChaXunDaiXiaoShangActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.LingYuanYuLiuActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiXiaoRenYuanActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DingJinDanChaXunYuanGongActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZiYouKeHuShangPinDingGouActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZiYouKeHuShangPinDingGouXiangXiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.XiuJiaBiaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.XiuJiaLieBiaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.XiuJiaShenQingActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ChuQinNeiRongActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ChuQinXiangXiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ChuQinZhuangTaiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BanShiChuDanYueYeJiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BanShiChuDanRiYeJiActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.GeRenYeJiLingDaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiXiaoYeJiLingDaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.ZhengJianActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DingJinDanChaXunLingDaoActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DaiXiaoYeJiZhuRenActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.DingJinDanChaXunZhuRenActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.YuYueCanGuanChaXunActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.GeRenYeJiZhuRenActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name=".activities.custom.BinZangXinWenActivity"
+				  android:screenOrientation="portrait"
+				  android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:name="com.alipay.sdk.app.H5PayActivity"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+				  android:exported="false"
+				  android:screenOrientation="behind"/>
+
+		<activity android:name="com.alipay.sdk.auth.AuthActivity"
+				  android:configChanges="orientation|keyboardHidden|navigation"
+				  android:exported="false"
+				  android:screenOrientation="behind"/>
+
+		<!-- Required SDK核心功能-->
+		<activity
+				android:name="cn.jpush.android.ui.PushActivity"
+				android:theme="@android:style/Theme.Translucent.NoTitleBar"
+				android:configChanges="orientation|keyboardHidden" >
+			<intent-filter>
+				<action android:name="cn.jpush.android.ui.PushActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="com.damytech.binzang" />
+			</intent-filter>
+		</activity>
+
+		<!-- Required  SDK核心功能-->
+		<service
+				android:name="cn.jpush.android.service.DownloadService"
+				android:enabled="true"
+				android:exported="false" >
+		</service>
+
+
+		<!-- Required SDK 核心功能-->
+		<service
+				android:name="cn.jpush.android.service.PushService"
+				android:enabled="true"
+				android:exported="false">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTER" />
+				<action android:name="cn.jpush.android.intent.REPORT" />
+				<action android:name="cn.jpush.android.intent.PushService" />
+				<action android:name="cn.jpush.android.intent.PUSH_TIME" />
+
+			</intent-filter>
+		</service>
+
+		<!-- Required SDK核心功能-->
+		<receiver
+				android:name="cn.jpush.android.service.PushReceiver"
+				android:enabled="true" >
+			<intent-filter android:priority="1000">
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+				<category android:name="com.damytech.binzang" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<!-- Optional -->
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<data android:scheme="package" />
+			</intent-filter>
+
+		</receiver>
+
+		<!-- Required SDK核心功能-->
+		<receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+		<!-- User defined.  For test only  用户自定义的广播接收器-->
+		<receiver
+				android:name="com.damytech.binzang.activities.preset.BCReceiver"
+				android:enabled="true">
+			<intent-filter>
+				<action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+				<action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+				<action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+				<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+				<action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+				<action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+				<category android:name="com.damytech.binzang" />
+			</intent-filter>
+		</receiver>
+
+		<meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+		<meta-data android:name="JPUSH_APPKEY" android:value="16ec2ed78399560789d2b44c"/>
+
+	</application>
+</manifest>
+
+

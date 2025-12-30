@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="订金单查询" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button
+				android:layout_width="100px"
+				android:layout_height="match_parent"
+				android:text="明细表"
+				android:id="@+id/btn_mingxibiao" android:layout_marginTop="10px" android:layout_marginBottom="10px"
+				android:layout_alignParentRight="true" android:layout_marginRight="10px"
+				android:background="@drawable/preset_btn_round_transparent_white" android:textColor="#FFFFFF"
+				android:textSize="20px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<FrameLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/tab_content_layout"
+				android:layout_above="@+id/tab_selector_layout">
+		</FrameLayout>
+		<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="20px"
+				android:id="@+id/imageView40" android:layout_above="@+id/tab_selector_layout"
+				android:background="@drawable/bk_tab_shadow"/>
+		<RadioGroup
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+				android:id="@+id/tab_selector_layout" android:orientation="horizontal">
+			<RadioButton
+					android:layout_width="0dp"
+					android:layout_height="60px"
+					android:text="自营订金"
+					android:id="@+id/radioButton4" android:button="@null" android:layout_weight="1"
+					android:background="@drawable/tab_back_color" android:checked="true"
+					android:textColor="@drawable/tab_text_color" android:gravity="center" android:textSize="24px"/>
+			<RadioButton
+					android:layout_width="0dp"
+					android:layout_height="60px"
+					android:text="代销商订金"
+					android:id="@+id/radioButton5" android:button="@null" android:layout_weight="1"
+					android:background="@drawable/tab_back_color" android:textColor="@drawable/tab_text_color"
+					android:gravity="center" android:textSize="24px"/>
+		</RadioGroup>
+	</RelativeLayout>
+</RelativeLayout>

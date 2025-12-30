@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="预约参观" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/scrollview">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="40px">
+				<RelativeLayout
+						android:layout_width="420px"
+						android:layout_height="50px" android:id="@+id/phone_layout" android:layout_centerHorizontal="true"
+						android:layout_marginTop="20px" android:background="@drawable/preset_round_transparent_gray"
+						android:paddingLeft="20px" android:paddingRight="20px">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:text="电话："
+							android:id="@+id/lbl_phone" android:gravity="center_vertical" android:textColor="#303030"
+							android:textSize="22px" android:paddingLeft="10px" android:paddingRight="10px"/>
+					<EditText
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/edt_phone" android:gravity="left|center_vertical" android:textColor="#303030"
+							android:textSize="22px" android:background="@null"
+							android:layout_toRightOf="@+id/lbl_phone" android:maxLength="11" android:inputType="phone"
+							android:paddingLeft="10px" android:paddingRight="10px"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="50px" android:id="@+id/nickname_layout" android:layout_centerHorizontal="true"
+						android:layout_below="@+id/phone_layout" android:layout_marginTop="20px"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px" android:layout_alignLeft="@+id/phone_layout"
+						android:layout_alignRight="@+id/phone_layout">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="match_parent"
+							android:text="称呼："
+							android:id="@+id/lbl_nickname" android:gravity="center_vertical" android:textColor="#303030"
+							android:textSize="22px" android:paddingLeft="10px" android:paddingRight="10px"/>
+					<EditText
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/edt_nickname" android:gravity="left|center_vertical" android:textColor="#303030"
+							android:textSize="22px" android:background="@null"
+							android:layout_toRightOf="@+id/lbl_nickname" android:maxLength="20"
+							android:inputType="text" android:paddingLeft="10px" android:paddingRight="10px"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="50px" android:id="@+id/city_layout"
+						android:layout_below="@+id/nickname_layout" android:layout_marginTop="20px"
+						android:layout_alignLeft="@+id/nickname_layout"
+						android:layout_alignRight="@+id/nickname_layout"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px">
+					<TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+							  android:text="所在城市：" android:id="@+id/txt_city" android:gravity="center_vertical"
+							  android:textColor="#303030" android:textSize="22px" android:paddingLeft="10px"
+							  android:paddingRight="10px"/>
+					<ImageView
+							android:layout_width="30px"
+							android:layout_height="match_parent"
+							android:id="@+id/img_arrow1" android:layout_alignParentRight="true"
+							android:scaleType="centerInside" android:src="@drawable/bk_down_arrow"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/txt_city_name" android:layout_toLeftOf="@+id/img_arrow1"
+							android:layout_toRightOf="@+id/txt_city" android:gravity="center"
+							android:textColor="#303030" android:textSize="22px"/>
+					<ImageButton
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/btn_city" android:layout_toRightOf="@+id/txt_city"
+							android:background="@null"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="50px" android:id="@+id/office_layout"
+						android:layout_below="@+id/city_layout" android:layout_marginTop="20px"
+						android:layout_alignLeft="@+id/city_layout" android:layout_alignRight="@+id/city_layout"
+						android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+						android:paddingRight="20px">
+					<TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+							  android:text="办事处：" android:id="@+id/txt_office" android:gravity="center_vertical"
+							  android:textColor="#303030" android:textSize="22px" android:paddingLeft="10px"
+							  android:paddingRight="10px"/>
+					<ImageView
+							android:layout_width="30px"
+							android:layout_height="match_parent"
+							android:id="@+id/img_arrow2" android:layout_alignParentRight="true"
+							android:scaleType="centerInside" android:src="@drawable/bk_down_arrow"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:id="@+id/txt_office_name" android:layout_toRightOf="@+id/txt_office"
+							android:layout_toLeftOf="@+id/img_arrow2" android:gravity="center"
+							android:textColor="#303030" android:textSize="22px"/>
+					<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+								 android:id="@+id/btn_office" android:layout_toRightOf="@+id/txt_office"
+								 android:background="@null"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+								android:id="@+id/time_layout"
+								android:layout_marginTop="20px" android:layout_centerHorizontal="true"
+								android:layout_below="@+id/office_layout">
+					<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+							  android:text="预约时间：" android:id="@+id/lbl_reserve_time" android:layout_marginBottom="20px"
+							  android:textColor="#303030"
+							  android:textSize="24px" android:layout_alignParentLeft="true"
+							  android:layout_alignParentTop="true"/>
+					<LinearLayout android:orientation="horizontal" android:layout_width="420px"
+								  android:layout_height="wrap_content" android:id="@+id/time_detail_layout"
+								  android:layout_centerInParent="true" android:layout_below="@+id/lbl_reserve_time">
+						<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+							  android:layout_height="wrap_content" android:id="@+id/year_view"
+							  android:layout_weight="1"/>
+						<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+							  android:layout_height="wrap_content" android:id="@+id/month_view"
+							  android:layout_weight="1"/>
+						<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+							  android:layout_height="wrap_content" android:id="@+id/day_view"
+							  android:layout_weight="1"/>
+						<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+							  android:layout_height="wrap_content" android:id="@+id/hour_view"
+							  android:layout_weight="1"/>
+					</LinearLayout>
+				</RelativeLayout>
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="注：根据预约地区不同，会安排不同办事处的工作人员联系您。"
+						android:id="@+id/lbl_hint" android:layout_alignLeft="@+id/nickname_layout"
+						android:layout_alignRight="@+id/nickname_layout" android:layout_below="@+id/time_layout"
+						android:layout_marginTop="20px" android:textSize="18px" android:textColor="#808080"/>
+				<RelativeLayout
+						android:layout_width="wrap_content"
+						android:layout_height="50px"
+						android:layout_below="@+id/lbl_hint" android:layout_centerHorizontal="true"
+						android:layout_marginTop="10px" android:id="@+id/operation_layout">
+					<Button
+							android:layout_width="420px"
+							android:layout_height="match_parent"
+							android:text="申请预约"
+							android:id="@+id/btn_confirm" android:background="@drawable/preset_btn_round_green_green"
+							android:textColor="#FFFFFF" android:textSize="22px"/>
+				</RelativeLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

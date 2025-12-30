@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="wrap_content"
+				android:layout_height="60px" android:background="@color/NORMAL_BACKCOLOR"
+				android:id="@+id/parent_layout" android:paddingLeft="10px" android:paddingRight="10px">
+
+	<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent" android:id="@+id/content_layout" android:paddingRight="1px"
+			android:paddingLeft="1px" android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="200px"
+				android:layout_height="match_parent"
+				android:text="名称"
+				android:id="@+id/lbl_item1" android:textColor="#303030"
+				android:textSize="22px"
+				android:layout_centerVertical="true"
+				android:gravity="center" android:background="@drawable/preset_rect_transparent_gray"
+				/>
+		<TextView
+				android:layout_width="170px"
+				android:layout_height="match_parent"
+				android:text="代销商"
+				android:id="@+id/lbl_item2" android:textColor="#303030"
+				android:textSize="22px"
+				android:layout_toRightOf="@+id/lbl_item1"
+				android:layout_centerVertical="true" android:gravity="center"
+				android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="170px"
+				android:layout_height="match_parent"
+				android:text="员工"
+				android:id="@+id/lbl_item3" android:textColor="#303030"
+				android:textSize="22px"
+				android:layout_toRightOf="@+id/lbl_item2"
+				android:layout_centerVertical="true" android:gravity="center"
+				android:background="@drawable/preset_rect_transparent_gray"/>
+		<TextView
+				android:layout_width="140px"
+				android:layout_height="match_parent"
+				android:text="成交价"
+				android:id="@+id/lbl_item4" android:textColor="#303030"
+				android:textSize="22px"
+				android:layout_toRightOf="@+id/lbl_item3"
+				android:layout_centerVertical="true" android:gravity="center"
+				android:background="@drawable/preset_rect_transparent_gray"/>
+	</RelativeLayout>
+</RelativeLayout>

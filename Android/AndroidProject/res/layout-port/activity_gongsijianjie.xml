@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="公司简介" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/scrollView3" android:layout_below="@+id/title_layout" android:layout_above="@+id/rlPhone">
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+                        android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200px" android:id="@+id/rlImage">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView" android:layout_marginLeft="10px" android:layout_marginTop="10px"
+                        android:layout_marginRight="10px" android:scaleType="fitXY"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_below="@+id/rlImage"
+                    android:id="@+id/rlWebContent">
+                <com.damytech.preset_controls.WebContentView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/webView" android:layout_margin="10px"/>
+            </RelativeLayout>
+        </RelativeLayout>
+	</ScrollView>
+	<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70px" android:layout_alignParentBottom="true" android:id="@+id/rlPhone">
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:id="@+id/imageView2" android:src="@drawable/icon_phone"
+                    android:layout_centerVertical="true" android:scaleType="centerInside"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务热线: "
+                    android:id="@+id/txtPhoneDesc" android:layout_toRightOf="@+id/imageView2"
+                    android:layout_centerVertical="true" android:textColor="#303030"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPhone" android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/txtPhoneDesc" android:layout_marginLeft="5px"
+                    android:textColor="#303030"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:id="@+id/imageView34" android:layout_alignBottom="@+id/txtPhoneDesc"
+                    android:layout_alignLeft="@+id/txtPhoneDesc" android:layout_alignRight="@+id/txtPhone"
+                    android:background="#303030"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_phone" android:layout_alignLeft="@+id/imageView2"
+                    android:layout_alignRight="@+id/txtPhone" android:background="@null"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

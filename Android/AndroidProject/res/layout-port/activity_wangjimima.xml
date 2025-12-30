@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="忘记密码"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout"
+					android:background="@color/NORMAL_BACKCOLOR">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scrollview">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="40px">
+				<RelativeLayout android:layout_width="400px" android:layout_height="60px" android:layout_centerHorizontal="true"
+								android:id="@+id/username_layout"
+								android:layout_marginTop="50px" android:background="@drawable/preset_round_transparent_gray">
+					<TextView
+							android:layout_width="120px"
+							android:layout_height="match_parent"
+							android:text="用户名："
+							android:id="@+id/lbl_user1" android:gravity="left|center_vertical"
+							android:textColor="#404040" android:textSize="22px" android:layout_marginLeft="10px"/>
+					<EditText android:layout_width="match_parent" android:layout_height="match_parent"
+							  android:id="@+id/edt_username" android:background="@null"
+							  android:paddingRight="6px" android:textColor="#303030"
+							  android:textSize="22px" android:inputType="text" android:maxLength="20"
+							  android:layout_toRightOf="@+id/lbl_user1" android:paddingLeft="6px"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="400px" android:layout_height="60px" android:layout_centerHorizontal="true"
+								android:id="@+id/phone_layout" android:layout_marginTop="30px"
+								android:background="@drawable/preset_round_transparent_gray"
+								android:layout_below="@+id/username_layout">
+					<TextView
+							android:layout_width="120px"
+							android:layout_height="match_parent"
+							android:text="手机号码："
+							android:id="@+id/lbl_phone" android:gravity="left|center_vertical"
+							android:textColor="#404040" android:textSize="22px" android:layout_marginLeft="10px"/>
+					<EditText android:layout_width="match_parent" android:layout_height="match_parent"
+							  android:id="@+id/edt_phone" android:background="@null" android:paddingRight="6px"
+							  android:textColor="#303030" android:textSize="22px"
+							  android:maxLength="11"
+							  android:layout_toRightOf="@+id/lbl_phone" android:inputType="phone"
+							  android:paddingLeft="6px"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="400px" android:layout_height="60px" android:layout_centerHorizontal="true"
+								android:id="@+id/new_pwd_layout" android:layout_marginTop="70px"
+								android:background="@drawable/preset_round_transparent_gray"
+								android:layout_below="@+id/phone_layout">
+					<TextView android:layout_width="120px" android:layout_height="match_parent"
+							  android:text="新密码：" android:id="@+id/lbl_pwd" android:gravity="left|center_vertical"
+							  android:textColor="#404040" android:textSize="22px" android:layout_alignParentLeft="false"
+							  android:layout_marginLeft="10px"/>
+					<EditText android:layout_width="match_parent" android:layout_height="match_parent"
+							  android:id="@+id/edt_new_pwd" android:background="@null" android:paddingRight="6px"
+							  android:textColor="#303030" android:textSize="22px"
+							  android:maxLength="16" android:layout_toRightOf="@+id/lbl_pwd" android:inputType="textPassword"
+							  android:paddingLeft="6px"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="400px" android:layout_height="60px" android:layout_centerHorizontal="true"
+								android:id="@+id/conf_pwd_layout" android:layout_marginTop="30px"
+								android:background="@drawable/preset_round_transparent_gray"
+								android:layout_below="@+id/new_pwd_layout">
+					<TextView
+							android:layout_width="120px"
+							android:layout_height="match_parent"
+							android:text="确认密码："
+							android:id="@+id/lbl_conf_pwd" android:gravity="left|center_vertical"
+							android:textColor="#404040" android:textSize="22px"
+							android:typeface="monospace" android:layout_marginLeft="10px"/>
+					<EditText android:layout_width="match_parent" android:layout_height="match_parent"
+							  android:id="@+id/edt_conf_pwd" android:background="@null" android:paddingRight="6px"
+							  android:textColor="#303030" android:textSize="22px"
+							  android:inputType="textPassword" android:maxLength="16" android:layout_toRightOf="@+id/lbl_conf_pwd"
+							  android:paddingLeft="6px"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="wrap_content"
+						android:layout_height="60px" android:id="@+id/operation_layout" android:layout_centerHorizontal="true"
+						android:layout_below="@+id/conf_pwd_layout" android:layout_marginTop="100px"
+						>
+					<Button
+							android:layout_width="400px"
+							android:layout_height="match_parent"
+							android:text="修改密码"
+							android:id="@+id/btn_confirm" android:background="@drawable/preset_btn_round_green_green"
+							android:textColor="#FFFFFF" android:textSize="24px"/>
+				</RelativeLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

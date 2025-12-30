@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="60px" android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true" android:id="@+id/descs_layout" android:background="@color/DEFAULT_BACK_GRAY">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="请选择地区"
+				android:id="@+id/textView12" android:textSize="22px"
+				android:layout_centerVertical="true" android:layout_marginLeft="20px"
+				android:textColor="@android:color/background_dark"/>
+	</RelativeLayout>
+	<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/scrollView" android:layout_below="@+id/descs_layout"
+			android:background="#ffeeeeee">
+		<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/arealist_layout"
+                android:orientation="vertical">
+        </LinearLayout>
+	</ScrollView>
+</RelativeLayout>

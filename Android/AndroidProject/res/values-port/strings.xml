@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">观陵山</string>
+	<string name="STR_PAY_SUBJECT">工程师支付订单</string>
+	<string name="STR_PAY_BODY">工程师ID：%1$d, 支付金额：%2$s</string>
+	<string name="STR_TITLE_NIHAO">您好!</string>
+	<string name="STR_TITLE_YEWUJINGLI">业务经理</string>
+</resources>

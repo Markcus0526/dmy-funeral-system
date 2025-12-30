@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="TITLE_BACKCOLOR">#1e1c11</color>
+	<color name="TITLE_FORECOLOR">#ffff99</color>
+	<color name="NORMAL_BACKCOLOR">#FFFFFF</color>
+
+	<color name="TAB_TEXT_SELECT_COLOR">#FFFFFF</color>
+	<color name="TAB_TEXT_NORMAL_COLOR">#404040</color>
+
+	<color name="TAB_BACK_SELECT_COLOR">#009A44</color>
+	<color name="TAB_BACK_NORMAL_COLOR">#D8D8D8</color>
+
+	<color name="YELLOW_COLOR">#ffff99</color>
+	<color name="BLACK_COLOR">#000000</color>
+
+	<color name="LIST_SEP_NORMAL_COLOR">#3b3b3b</color>
+	<color name="DEFAULT_BACK_GRAY">#EEEEEE</color>
+</resources>

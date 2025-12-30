@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+				android:id="@+id/main_scrollview" android:background="#FFFFFF">
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+						android:id="@+id/scroll_view_content_layout" android:paddingBottom="30px">
+			<RelativeLayout android:layout_width="fill_parent" android:layout_height="70px"
+							android:id="@+id/bery_service_header_layout">
+				<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="落葬服务"
+						  android:id="@+id/lbl_header" android:gravity="center_vertical" android:textColor="#404040"
+						  android:paddingLeft="50px" android:textSize="26px" android:textStyle="bold"/>
+				<ImageView android:layout_width="match_parent" android:layout_height="1px" android:id="@+id/img_sep"
+						   android:background="#404040" android:layout_alignParentBottom="true"
+						   android:layout_marginLeft="40px"/>
+			</RelativeLayout>
+			<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/bery_services_layout"
+					android:layout_below="@+id/bery_service_header_layout">
+			</LinearLayout>
+			<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="70px" android:id="@+id/deputy_service_header_layout"
+					android:layout_below="@+id/bery_services_layout" android:layout_marginTop="50px"
+					android:visibility="gone">
+				<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="1px"
+						android:id="@+id/img_top_header" android:background="#404040"/>
+				<TextView
+						android:layout_width="match_parent"
+						android:layout_height="70px"
+						android:text="代祭拜服务"
+						android:id="@+id/lbl_header2" android:textColor="#404040" android:textSize="26px"
+						android:paddingLeft="50px" android:gravity="center_vertical" android:textStyle="bold"/>
+				<ImageView android:layout_width="match_parent" android:layout_height="1px"
+						   android:id="@+id/img_bottom_sep" android:background="#404040"
+						   android:layout_alignParentBottom="true" android:layout_marginLeft="40px"/>
+			</RelativeLayout>
+			<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" android:id="@+id/deputy_service_body_layout"
+					android:layout_marginTop="20px" android:layout_below="@+id/deputy_service_header_layout"
+					android:visibility="gone">
+				<ImageView
+						android:layout_width="440px"
+						android:layout_height="210px"
+						android:id="@+id/img_deputy" android:layout_centerHorizontal="true"
+						android:background="@drawable/preset_rect_transparent_gray"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_deputy_contents" android:layout_alignLeft="@+id/img_deputy"
+						android:layout_alignRight="@+id/img_deputy" android:layout_below="@+id/img_deputy"
+						android:layout_marginTop="30px" android:textColor="#404040" android:textSize="22px"/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

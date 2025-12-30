@@ -1,0 +1,1 @@
+InstallUtil /u E:\50_BinZang\Ref\DailyService\WindowsService\WindowsServiceCS\bin\Debug\WindowsServiceCS.exe

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/item_layout" android:background="#FFFFFF"
+                android:paddingLeft="10px" android:paddingTop="10px" android:paddingRight="10px"
+                android:paddingBottom="3px">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="@drawable/preset_round_white_gray"
+            android:id="@+id/content_layout" android:padding="10px">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="牌位编号："
+                android:id="@+id/txt_title" android:layout_marginLeft="10px"
+                android:textColor="#303030" android:textSize="22px"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/txtName" android:layout_toRightOf="@+id/txt_title" android:layout_marginLeft="10px"
+                  android:textColor="#303030" android:textSize="22px"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="价钱："
+                  android:id="@+id/textView3" android:layout_marginLeft="10px"
+                  android:textColor="#303030" android:textSize="22px"
+                  android:layout_marginTop="10px" android:layout_below="@+id/txt_title"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtPrice"
+                  android:layout_toRightOf="@+id/textView3" android:layout_marginLeft="10px" android:textColor="#303030"
+                  android:textSize="22px" android:layout_alignTop="@+id/textView3"/>
+    </RelativeLayout>
+</RelativeLayout>

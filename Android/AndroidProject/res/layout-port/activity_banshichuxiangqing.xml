@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="办事处详情"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scrollview">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="40px">
+				<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="230px"
+						android:id="@+id/img_main" android:scaleType="fitXY" android:layout_marginLeft="10px"
+						android:layout_marginTop="10px" android:layout_marginRight="10px"/>
+				<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="1px"
+						android:id="@+id/img_sep" android:layout_below="@+id/img_main" android:background="#505050"
+						android:layout_marginLeft="10px" android:layout_marginRight="10px"/>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/addr_layout"
+						android:layout_below="@+id/img_main"
+						android:layout_marginTop="30px" android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="地址："
+							android:id="@+id/lbl_addr" android:textColor="#303030" android:textSize="22px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_addr" android:textColor="#303030" android:textSize="22px"
+							android:layout_toRightOf="@+id/lbl_addr"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/phone_layout"
+						android:layout_below="@+id/addr_layout"
+						android:layout_marginTop="30px" android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="电话："
+							android:id="@+id/lbl_phone" android:textColor="#303030" android:textSize="22px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_phone" android:textColor="#303030" android:textSize="22px"
+							android:layout_toRightOf="@+id/lbl_phone"/>
+					<ImageButton
+							android:layout_width="wrap_content"
+							android:layout_height="30px"
+							android:id="@+id/btn_phone" android:background="@null"
+							android:layout_alignRight="@+id/txt_phone" android:layout_alignLeft="@+id/lbl_phone"/>
+				</RelativeLayout>
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/emp_list_layout"
+						android:layout_below="@+id/phone_layout" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+				</LinearLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="STR_LOADING_IMAGE_FAILED">读取照片失败</string>
+	<string name="STR_TAKING_PHOTO_FAILED">拍照失败</string>
+	<string name="STR_CANNOT_TAKEPHOTO">抱歉，您的手机不会保存照片</string>
+</resources>

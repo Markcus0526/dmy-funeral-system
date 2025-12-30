@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent_layout" android:background="#FFFFFF">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/content_layout"
+            android:paddingBottom="10px">
+        <ImageView
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:id="@+id/img_intro"
+                android:layout_marginLeft="10px" android:layout_marginTop="10px" android:layout_marginRight="10px"
+                android:background="@drawable/preset_rect_transparent_gray" android:scaleType="centerInside"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/txt_Name" android:layout_toRightOf="@+id/img_intro"
+                android:layout_alignTop="@+id/img_intro" android:layout_marginTop="10px"
+                android:layout_marginLeft="5px" android:textColor="#404040" android:textSize="24px"/>
+        <ImageView
+                android:layout_width="36px"
+                android:layout_height="36px"
+                android:id="@+id/img_adress"
+                android:layout_alignLeft="@+id/txt_Name" android:layout_below="@+id/txt_Name"
+                android:layout_marginTop="5px" android:src="@drawable/icon_addr" android:scaleType="centerInside"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址:"
+                android:id="@+id/lbl_address" android:textColor="#404040" android:textSize="20px"
+                android:layout_toRightOf="@+id/img_adress" android:layout_alignBottom="@+id/img_adress"
+                android:layout_marginLeft="5px" android:layout_alignTop="@+id/img_adress"
+                android:gravity="center"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="沈阳棋盘山国际风景旅游开发"
+                android:id="@+id/txt_address" android:textSize="22px" android:textColor="#404040"
+                android:maxLength="6" android:ellipsize="end" android:layout_toRightOf="@+id/lbl_address"
+                android:layout_alignTop="@+id/img_adress" android:layout_alignBottom="@+id/img_adress"
+                android:gravity="center" android:singleLine="true"/>
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="1px"
+				android:id="@+id/img_underline1" android:layout_alignBottom="@+id/txt_address"
+				android:layout_alignLeft="@+id/lbl_address" android:layout_alignRight="@+id/txt_address"
+				android:background="#404040"/>
+		<ImageView android:layout_width="36px" android:layout_height="36px" android:id="@+id/img_phonenum"
+                   android:layout_alignLeft="@+id/img_adress"
+                   android:layout_below="@+id/txt_address" android:layout_marginTop="5px"
+                   android:src="@drawable/icon_phone" android:scaleType="centerInside"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="电话:"
+                  android:id="@+id/lbl_phonenum" android:textColor="#404040" android:textSize="20px"
+                  android:layout_toRightOf="@+id/img_adress" android:layout_alignBottom="@+id/img_phonenum"
+                  android:layout_marginLeft="5px" android:layout_alignTop="@+id/img_phonenum" android:gravity="center"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="024-11102222"
+                  android:id="@+id/txt_phonenum" android:textSize="22px" android:textColor="#404040"
+                  android:maxLength="12" android:ellipsize="end" android:layout_toRightOf="@+id/lbl_address"
+                  android:layout_alignTop="@+id/img_phonenum" android:layout_alignBottom="@+id/img_phonenum"
+                  android:gravity="center" android:singleLine="true"/>
+		<ImageView android:layout_width="wrap_content" android:layout_height="1px" android:id="@+id/imageView35"
+				   android:layout_alignBottom="@+id/txt_phonenum" android:layout_alignLeft="@+id/lbl_phonenum"
+				   android:layout_alignRight="@+id/txt_phonenum" android:background="#404040"/>
+		<ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:id="@+id/img_rightarrow"
+                android:layout_alignParentEnd="true" android:layout_alignParentStart="false"
+                android:layout_centerVertical="true" android:layout_marginRight="15px"
+                android:src="@drawable/bk_right_arrow" android:scaleType="centerInside"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btn_itemsel"
+					 android:background="@drawable/preset_btn_rect_transparent_transparent"
+                     android:layout_alignBottom="@+id/img_intro" android:layout_alignRight="@+id/img_intro"
+                     android:layout_alignTop="@+id/img_intro" android:layout_alignLeft="@+id/img_intro"
+					 android:scaleType="centerInside"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_addr" android:layout_alignTop="@+id/txt_address"
+                android:layout_alignLeft="@+id/img_adress" android:layout_alignRight="@+id/txt_address"
+                android:layout_alignBottom="@+id/txt_address" android:background="@null"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_phone" android:background="@null" android:layout_alignTop="@+id/txt_phonenum"
+                android:layout_alignLeft="@+id/img_phonenum" android:layout_alignBottom="@+id/txt_phonenum"
+                android:layout_alignRight="@+id/txt_phonenum"/>
+    </RelativeLayout>
+</RelativeLayout>

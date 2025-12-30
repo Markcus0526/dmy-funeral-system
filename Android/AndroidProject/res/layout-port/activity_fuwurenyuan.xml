@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@color/NORMAL_BACKCOLOR">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="服务人员" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<ImageButton
+				android:layout_width="70px"
+				android:layout_height="match_parent"
+				android:id="@+id/btn_user" android:layout_alignParentRight="true" android:background="@null"
+				android:scaleType="centerInside" android:src="@drawable/preset_btn_user" android:padding="10px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scroll">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="30px">
+				<ImageView
+						android:layout_width="180px"
+						android:layout_height="180px"
+						android:id="@+id/img_photo" android:layout_marginTop="40px"
+						android:layout_centerHorizontal="true" android:background="@drawable/preset_rect_transparent_gray"
+						android:scaleType="centerInside"/>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/name_layout"
+						android:layout_below="@+id/img_photo" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="姓名："
+							android:id="@+id/lbl_name" android:textSize="26px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_name" android:textSize="26px" android:textColor="#303030"
+							android:layout_toRightOf="@+id/lbl_name"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/description_layout"
+						android:layout_below="@+id/name_layout" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="职位："
+							android:id="@+id/lbl_desc" android:textSize="26px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_desc" android:textSize="26px" android:textColor="#303030"
+							android:layout_toRightOf="@+id/lbl_desc"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/office_layout"
+						android:layout_below="@+id/description_layout" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="所属办事处："
+							android:id="@+id/lbl_office" android:textSize="26px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceLarge"
+							android:id="@+id/txt_office" android:textSize="26px" android:textColor="#303030"
+							android:layout_toRightOf="@+id/lbl_office"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/phone_layout"
+						android:layout_below="@+id/office_layout" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="电话："
+							android:id="@+id/lbl_phone" android:textSize="26px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_phone" android:textSize="26px" android:textColor="#0000FF"
+							android:layout_toRightOf="@+id/lbl_phone" android:paddingLeft="10px"
+							android:paddingRight="10px"/>
+					<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="1px"
+							android:id="@+id/imageView33" android:layout_alignBottom="@+id/txt_phone"
+							android:layout_alignLeft="@+id/txt_phone" android:layout_alignRight="@+id/txt_phone"
+							android:background="#0000FF"/>
+					<ImageButton
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/btn_phone" android:layout_alignTop="@+id/txt_phone"
+							android:layout_alignLeft="@+id/lbl_phone" android:layout_alignBottom="@+id/txt_phone"
+							android:layout_alignRight="@+id/txt_phone"
+							android:background="@null"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:id="@+id/address_layout"
+						android:layout_below="@+id/phone_layout" android:layout_marginTop="30px"
+						android:layout_centerHorizontal="true">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="地址："
+							android:id="@+id/lbl_addr" android:textSize="26px" android:textColor="#303030"/>
+					<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_addr" android:textSize="26px" android:textColor="#303030"
+							android:layout_toRightOf="@+id/lbl_addr"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_below="@+id/address_layout"
+						android:layout_alignLeft="@+id/address_layout" android:layout_marginTop="30px"
+						android:id="@+id/detail_table">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="明 细 表"
+							android:id="@+id/lbl_details" android:textColor="#0000FF" android:textSize="26px"
+							android:paddingLeft="20px" android:paddingRight="20px" android:paddingTop="20px"/>
+					<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="1px"
+							android:id="@+id/img_underline" android:background="#0000FF"
+							android:layout_alignBottom="@+id/lbl_details" android:layout_alignLeft="@+id/lbl_details"
+							android:layout_alignRight="@+id/lbl_details"/>
+				</RelativeLayout>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

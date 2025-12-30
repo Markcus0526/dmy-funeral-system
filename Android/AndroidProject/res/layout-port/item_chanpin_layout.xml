@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR"
+				android:id="@+id/parent_layout">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:paddingLeft="20px"
+			android:paddingRight="4px" android:paddingTop="20px" android:paddingBottom="20px">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_title" android:textColor="#303030" android:textSize="24px"
+				android:layout_marginLeft="10px" android:layout_toRightOf="@+id/img_product"
+				android:layout_alignTop="@+id/img_product" android:layout_marginRight="10px"
+				android:layout_toLeftOf="@+id/lbl_price" android:ellipsize="end"/>
+		<ImageView
+				android:layout_width="90px"
+				android:layout_height="90px"
+				android:id="@+id/img_product" android:background="@drawable/preset_rect_transparent_gray"
+				android:layout_marginTop="4px"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="价格："
+				android:id="@+id/lbl_price" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignParentRight="false" android:layout_toLeftOf="@+id/txt_date"
+				android:layout_alignTop="@+id/txt_date" android:layout_alignBottom="@+id/txt_date"
+				android:gravity="center"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="￥1700"
+				android:id="@+id/txt_date" android:textColor="#FF0000" android:textSize="28px"
+				android:layout_alignParentRight="true" android:layout_alignTop="@+id/img_product"
+				android:layout_marginRight="10px"/>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/count_layout"
+				android:layout_below="@+id/txt_title" android:layout_marginTop="10px"
+				android:layout_toRightOf="@+id/img_product">
+			<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+				<ImageButton
+						android:layout_width="50px"
+						android:layout_height="50px"
+						android:id="@+id/btn_minus" android:scaleType="centerInside"
+						android:src="@drawable/preset_btn_minus" android:background="@null"
+						android:layout_centerVertical="true" android:padding="6px"/>
+				<TextView
+						android:layout_width="100px"
+						android:layout_height="40px"
+						android:text="9999999"
+						android:id="@+id/txt_count" android:textColor="#303030" android:textSize="24px"
+						android:layout_toRightOf="@+id/btn_minus" android:layout_marginLeft="20px"
+						android:layout_centerVertical="true" android:gravity="center"
+						android:background="@drawable/preset_round_transparent_gray"/>
+				<ImageButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/btn_count" android:layout_alignTop="@+id/txt_count"
+						android:layout_alignLeft="@+id/txt_count" android:layout_alignBottom="@+id/txt_count"
+						android:layout_alignRight="@+id/txt_count" android:layout_centerVertical="true"
+						android:background="@drawable/preset_btn_round_transparent_transparent"/>
+				<ImageButton
+						android:layout_width="50px"
+						android:layout_height="50px"
+						android:id="@+id/btn_plus"
+						android:scaleType="centerInside" android:src="@drawable/preset_btn_plus" android:background="@null"
+						android:layout_marginLeft="20px" android:layout_centerVertical="true"
+						android:layout_toRightOf="@+id/txt_count" android:padding="6px"/>
+			</RelativeLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

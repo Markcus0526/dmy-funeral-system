@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="支付"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="确认支付"
+				android:id="@+id/btn_confirm_pay" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				/>
+	</RelativeLayout>
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_below="@+id/title_layout"
+			android:id="@+id/content_layout">
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/main_scroll">
+			<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/scroll_content_layout"
+					android:paddingBottom="30px">
+				<RelativeLayout
+						android:layout_width="440px"
+						android:layout_height="wrap_content" android:layout_marginTop="30px" android:layout_centerHorizontal="true"
+						android:id="@+id/main_info_layout" android:background="@drawable/preset_rect_transparent_gray"
+						android:padding="20px">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="预约时间："
+							android:id="@+id/lbl_reserve_time" android:textColor="#303030" android:textSize="24px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_reserve_time" android:textColor="#303030" android:textSize="24px"
+							android:layout_alignTop="@+id/lbl_reserve_time" android:layout_toRightOf="@+id/lbl_reserve_time"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="仪式类型："
+							android:id="@+id/lbl_service_type" android:textColor="#303030" android:textSize="24px"
+							android:layout_below="@+id/txt_reserve_time" android:layout_marginTop="20px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="落葬"
+							android:id="@+id/txt_service_type" android:textColor="#303030" android:textSize="24px"
+							android:layout_toRightOf="@+id/lbl_service_type" android:layout_alignTop="@+id/lbl_service_type"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="服务名称："
+							android:id="@+id/lbl_service_name" android:textColor="#303030" android:textSize="24px"
+							android:layout_below="@+id/txt_service_type" android:layout_marginTop="20px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_service_name" android:textColor="#303030" android:textSize="24px"
+							android:layout_alignTop="@+id/lbl_service_name" android:layout_toRightOf="@+id/lbl_service_name"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="是否代祭拜："
+							android:id="@+id/lbl_deputy" android:textColor="#303030" android:textSize="24px"
+							android:layout_below="@+id/txt_service_name" android:layout_marginTop="20px"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="否"
+							android:id="@+id/txt_deputy" android:textColor="#303030" android:textSize="24px"
+							android:layout_toRightOf="@+id/lbl_deputy" android:layout_alignTop="@+id/lbl_deputy"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="服务金额："
+							android:id="@+id/lbl_price" android:textColor="#303030" android:textSize="24px"
+							android:layout_alignTop="@+id/txt_date" android:layout_toLeftOf="@+id/txt_date"
+							android:layout_alignBottom="@+id/txt_date" android:gravity="center_vertical"/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:id="@+id/txt_date" android:textColor="#FF0000" android:textSize="28px"
+							android:layout_alignParentRight="true" android:layout_below="@+id/txt_deputy"
+							android:layout_marginTop="20px" android:gravity="center_vertical"/>
+				</RelativeLayout>
+				<RelativeLayout
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:id="@+id/products_layout"
+						android:layout_below="@+id/main_info_layout" android:layout_alignLeft="@+id/main_info_layout"
+						android:layout_alignRight="@+id/main_info_layout" android:layout_marginTop="50px"
+						android:background="@drawable/preset_rect_transparent_gray">
+					<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:id="@+id/products_list_layout">
+					</LinearLayout>
+				</RelativeLayout>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/txt_total_price" android:layout_below="@+id/products_layout"
+						android:layout_alignRight="@+id/products_layout" android:layout_marginTop="20px"
+						android:textColor="#FF0000" android:textSize="30px"/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="总金额："
+						android:id="@+id/lbl_total_price" android:textSize="24px" android:textColor="#303030"
+						android:gravity="center_vertical" android:layout_alignTop="@+id/txt_total_price"
+						android:layout_alignBottom="@+id/txt_total_price" android:layout_toLeftOf="@+id/txt_total_price"/>
+			</RelativeLayout>
+		</ScrollView>
+	</RelativeLayout>
+</RelativeLayout>

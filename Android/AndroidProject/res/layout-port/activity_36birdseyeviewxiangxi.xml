@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="活动介绍"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<Button android:layout_width="100px" android:layout_height="40px" android:text="预约参观"
+				android:id="@+id/btn_reserve_visit" android:layout_alignParentRight="true"
+				android:background="@drawable/preset_btn_round_transparent_white" android:layout_centerVertical="true"
+				android:layout_marginRight="10px" android:textColor="#FFFFFF" android:textSize="18px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/scrollView2" android:layout_below="@+id/title_layout">
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+                        android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200px"
+                    android:id="@+id/img_main" android:background="#E0E0E0" android:scaleType="fitXY"
+					android:layout_marginLeft="10px" android:layout_marginTop="10px" android:layout_marginRight="10px"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="活动名称："
+                    android:id="@+id/lbl_view_title" android:layout_below="@+id/img_main"
+                    android:layout_marginTop="40px" android:layout_marginLeft="30px" android:textSize="26px"
+                    android:textColor="#404040" android:layout_marginRight="30px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_view_title"
+                    android:textSize="22px" android:textColor="#404040"
+                    android:layout_below="@+id/lbl_view_title" android:layout_alignLeft="@+id/lbl_view_title"
+                    android:layout_marginTop="10px" android:layout_alignRight="@+id/lbl_view_title"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动介绍："
+                    android:id="@+id/lbl_view_contents" android:layout_alignLeft="@+id/txt_view_title"
+                    android:layout_below="@+id/txt_view_title" android:layout_marginTop="20px"
+                    android:textSize="26px" android:textColor="#404040"
+                    android:layout_alignRight="@+id/lbl_view_title"/>
+            <view android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  class="com.damytech.preset_controls.WebContentView" android:id="@+id/contents_view"
+                  android:layout_below="@+id/lbl_view_contents" android:layout_marginTop="10px"
+                  android:layout_marginLeft="10px" android:layout_marginRight="10px" android:layout_marginBottom="10px"/>
+        </RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

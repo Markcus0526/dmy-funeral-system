@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@color/NORMAL_BACKCOLOR" android:padding="12px"
+			android:id="@+id/content_layout">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/main_info_layout"
+				android:layout_toLeftOf="@+id/img_right">
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="购买时间："
+					android:id="@+id/lbl_buy_time" android:textColor="#303030" android:textSize="22px"
+					/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="New Text"
+					android:id="@+id/txt_buy_time" android:textSize="22px" android:textColor="#303030"
+					android:layout_alignParentLeft="false" android:paddingRight="14px" android:singleLine="true"
+					android:ellipsize="end" android:layout_toRightOf="@+id/lbl_buy_time"/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="购买人名称："
+					android:id="@+id/lbl_user_name" android:textColor="#303030" android:textSize="22px"
+					android:layout_below="@+id/lbl_buy_time" android:layout_marginTop="10px"/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="New Text"
+					android:id="@+id/txt_user_name" android:textSize="22px" android:textColor="#303030"
+					android:singleLine="true" android:layout_alignTop="@+id/lbl_user_name"
+					android:layout_toRightOf="@+id/lbl_user_name"/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="总金额："
+					android:id="@+id/lbl_price"
+					android:layout_alignParentRight="false" android:textColor="#404040" android:textSize="20px"
+					android:layout_alignTop="@+id/txt_date" android:layout_alignBottom="@+id/txt_date"
+					android:layout_toLeftOf="@+id/txt_date" android:gravity="center"/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="1232"
+					android:id="@+id/txt_date" android:textColor="#FF0000" android:textSize="30px"
+					android:layout_alignParentRight="true" android:layout_below="@+id/txt_user_name"
+					android:layout_marginTop="2px" android:gravity="center" android:layout_marginRight="10px"/>
+		</RelativeLayout>
+		<ImageView
+				android:layout_width="50px"
+				android:layout_height="40px"
+				android:id="@+id/img_right" android:layout_alignParentRight="true" android:scaleType="centerInside"
+				android:src="@drawable/bk_right_arrow" android:layout_centerVertical="true"/>
+	</RelativeLayout>
+	<ImageButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btn_item" android:layout_alignTop="@+id/content_layout"
+			android:layout_alignLeft="@+id/content_layout" android:layout_alignBottom="@+id/content_layout"
+			android:layout_alignRight="@+id/content_layout"
+			android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+</RelativeLayout>

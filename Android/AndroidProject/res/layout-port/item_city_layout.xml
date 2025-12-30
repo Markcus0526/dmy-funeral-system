@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent_layout">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90px">
+        <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:background="#ffffffff">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txt_main_title" android:textColor="#000000" android:textSize="26px"
+                    android:gravity="center_vertical|left" android:paddingLeft="10px" android:layout_marginLeft="20px"/>
+            <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:id="@+id/img_expand" android:src="@drawable/bk_right_arrow" android:scaleType="centerInside"
+                    android:padding="8px" android:layout_alignParentRight="true" android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/txt_main_title" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_expand" android:background="@drawable/preset_btn_rect_transparent_transparent"
+                />
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="5px"
+                android:id="@+id/img_sep" android:layout_alignParentBottom="true" android:background="@color/DEFAULT_BACK_GRAY"/>
+    </RelativeLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_marginLeft="20px" android:id="@+id/sublist_layout">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout"
+					android:background="@color/NORMAL_BACKCOLOR">
+		<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/selector_layout"
+				android:layout_centerHorizontal="true" android:layout_marginTop="20px"
+				>
+			<ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/img_cal"
+					   android:scaleType="centerInside" android:src="@drawable/bk_radio_sel"
+					/>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="日历形式"
+					  android:id="@+id/txt_cal" android:textColor="#303030" android:textSize="24px"
+					  android:gravity="center" android:layout_alignTop="@+id/img_cal"
+					  android:layout_alignBottom="@+id/img_cal" android:layout_toRightOf="@+id/img_cal"/>
+			<ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+						 android:id="@+id/btn_cal" android:layout_alignTop="@+id/img_cal"
+						 android:layout_alignLeft="@+id/img_cal" android:layout_alignBottom="@+id/img_cal"
+						 android:layout_alignRight="@+id/txt_cal" android:background="@null"/>
+			<ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/img_list"
+					   android:scaleType="centerInside" android:src="@drawable/bk_radio_normal"
+					   android:layout_toRightOf="@+id/txt_cal" android:layout_alignTop="@+id/img_cal"
+					   android:layout_marginLeft="60px"/>
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="列表形式"
+					  android:id="@+id/txt_list" android:textColor="#303030" android:textSize="24px"
+					  android:gravity="center" android:layout_alignTop="@+id/img_list"
+					  android:layout_toRightOf="@+id/img_list" android:layout_alignBottom="@+id/img_list"/>
+			<ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+						 android:id="@+id/btn_list" android:layout_alignBottom="@+id/img_list"
+						 android:layout_alignTop="@+id/img_list" android:layout_alignLeft="@+id/img_list"
+						 android:layout_alignRight="@+id/txt_list" android:background="@null"/>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/cal_layout"
+				android:layout_below="@+id/selector_layout">
+			<view android:layout_width="match_parent"
+				  android:layout_height="match_parent"
+				  class="com.damytech.preset_controls.CalendarView" android:id="@+id/cal_view"/>
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+						  android:layout_height="fill_parent" android:id="@+id/linearLayout2"
+						  android:layout_alignTop="@+id/cal_view" android:layout_alignLeft="@+id/cal_view"
+						  android:layout_alignBottom="@+id/cal_view" android:layout_alignRight="@+id/cal_view">
+				<RelativeLayout android:layout_width="fill_parent" android:layout_height="0dp" android:layout_weight="1">
+					<ImageButton android:layout_width="110px" android:layout_height="70px" android:id="@+id/btn_prev"
+								 android:background="@null" android:layout_alignParentTop="false"
+								 android:layout_alignParentLeft="true" android:src="@drawable/bk_left_arrow"
+								 android:scaleType="centerInside" android:layout_centerVertical="true"
+								 android:padding="10px"/>
+					<ImageButton android:layout_width="110px" android:layout_height="70px" android:id="@+id/btn_next"
+								 android:background="@null" android:layout_alignParentRight="true"
+								 android:layout_alignParentTop="false" android:src="@drawable/bk_right_arrow"
+								 android:scaleType="centerInside" android:layout_centerVertical="true"
+								 android:padding="10px"/>
+				</RelativeLayout>
+				<RelativeLayout android:layout_width="fill_parent" android:layout_height="0dp" android:layout_weight="5"/>
+			</LinearLayout>
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_below="@+id/selector_layout"
+				android:id="@+id/list_layout" android:visibility="invisible">
+			<ListView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/list_logs" android:divider="#00000000"
+					android:cacheColorHint="#FFFFFF"/>
+		</RelativeLayout>
+	</RelativeLayout>
+
+</RelativeLayout>

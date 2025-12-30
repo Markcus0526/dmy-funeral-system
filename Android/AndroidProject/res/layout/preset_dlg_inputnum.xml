@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="400px"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout"
+				android:background="@drawable/preset_round_white_gray" android:paddingBottom="30px">
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="请输入数值"
+			android:id="@+id/txt_hint" android:layout_marginTop="30px" android:layout_marginLeft="40px"
+			android:textColor="#303030" android:textSize="24px"/>
+	<EditText
+			android:layout_width="match_parent"
+			android:layout_height="50px"
+			android:id="@+id/edt_num" android:layout_below="@+id/txt_hint" android:layout_marginLeft="30px"
+			android:layout_marginRight="30px" android:background="@drawable/preset_round_transparent_gray"
+			android:layout_marginTop="20px" android:textColor="#303030" android:textSize="24px"
+			android:paddingLeft="10px" android:paddingRight="10px"/>
+	<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:id="@+id/operation_layout" android:layout_centerHorizontal="true"
+					android:layout_below="@+id/edt_num" android:layout_marginTop="30px">
+		<Button android:layout_width="130px" android:layout_height="42px" android:text="确定" android:id="@+id/btn_confirm"
+				android:layout_alignParentLeft="false" android:textColor="#FFFFFF" android:textSize="22px"
+				android:background="@drawable/preset_btn_round_green_green"/>
+		<Button android:layout_width="130px" android:layout_height="42px" android:text="取消" android:id="@+id/btn_cancel"
+				android:layout_alignParentRight="false" android:textSize="22px" android:textColor="#000000"
+				android:background="@drawable/preset_btn_round_white_gray" android:layout_toRightOf="@+id/btn_confirm"
+				android:layout_marginLeft="40px"/>
+	</RelativeLayout>
+</RelativeLayout>

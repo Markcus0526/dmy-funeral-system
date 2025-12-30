@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout">
+
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" android:id="@+id/content_layout"
+			android:background="@drawable/preset_round_transparent_gray">
+		<ImageView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:id="@+id/img_pre_space" android:layout_weight="15"/>
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:text="Content"
+				android:id="@+id/txt_content" android:gravity="center" android:textColor="#303030"
+				android:textSize="24px" android:layout_weight="60"/>
+		<ImageView
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:id="@+id/img_downarrow" android:layout_alignTop="@+id/txt_content"
+				android:layout_alignBottom="@+id/txt_content" android:layout_alignRight="@+id/txt_content"
+				android:scaleType="centerInside" android:src="@drawable/preset_down_arrow" android:layout_weight="20"/>
+	</LinearLayout>
+	<ImageButton
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/btn_select" android:background="@drawable/preset_btn_round_transparent_transparent"/>
+</RelativeLayout>

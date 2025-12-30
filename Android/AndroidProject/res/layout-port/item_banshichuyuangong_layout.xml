@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout">
+
+	<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:id="@+id/content_layout"
+					android:padding="10px" android:background="@drawable/preset_rect_white_gray">
+		<ImageView android:layout_width="120px" android:layout_height="130px" android:id="@+id/img_photo"
+				   android:layout_below="@+id/txt_desc"
+				   android:layout_marginTop="4px" android:scaleType="centerInside"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="员工名称"
+				  android:id="@+id/txt_desc"
+				  android:textColor="#303030" android:textSize="24px"/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/txt_name"
+				  android:layout_toRightOf="@+id/img_photo" android:layout_marginLeft="10px" android:textColor="#303030"
+				  android:textSize="20px" android:layout_alignTop="@+id/img_photo" android:singleLine="true"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Tel—"
+				android:id="@+id/lbl_phone" android:textColor="#303030" android:textSize="20px"
+				android:layout_alignLeft="@+id/txt_name" android:layout_below="@+id/txt_name"
+				android:layout_marginTop="10px"/>
+		<ImageButton
+				android:layout_width="match_parent"
+				android:layout_height="40px"
+				android:id="@+id/btn_phone" android:layout_alignLeft="@+id/lbl_phone"
+				android:layout_alignTop="@+id/lbl_phone" android:background="@null"
+				/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+				  android:id="@+id/txt_phone" android:layout_toRightOf="@+id/lbl_phone"
+				  android:textColor="#303030" android:textSize="20px"
+				  android:layout_alignTop="@+id/lbl_phone"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="QQ—"
+				android:id="@+id/lbl_qq" android:textColor="#303030" android:textSize="20px"
+				android:layout_alignLeft="@+id/lbl_phone" android:layout_below="@+id/lbl_phone"
+				android:layout_marginTop="10px"/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/txt_qq"
+				  android:layout_toRightOf="@+id/lbl_qq" android:textColor="#303030"
+				  android:textSize="20px" android:layout_alignTop="@+id/lbl_qq" android:maxLines="2"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="微信—"
+				android:id="@+id/lbl_weixin" android:textColor="#303030" android:textSize="20px"
+				android:layout_below="@+id/lbl_qq" android:layout_alignLeft="@+id/lbl_qq"
+				android:layout_marginTop="10px"/>
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+				  android:id="@+id/txt_weixin" android:layout_toRightOf="@+id/lbl_weixin"
+				  android:textColor="#303030" android:textSize="20px"
+				  android:layout_alignTop="@+id/lbl_weixin"/>
+	</RelativeLayout>
+</RelativeLayout>

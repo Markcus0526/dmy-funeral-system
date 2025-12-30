@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@color/NORMAL_BACKCOLOR">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="陵园助手—领导" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton
+				android:layout_width="70px"
+				android:layout_height="match_parent"
+				android:id="@+id/btn_user" android:layout_alignParentRight="true" android:background="@null"
+				android:scaleType="centerInside" android:src="@drawable/preset_btn_user" android:padding="10px"
+				android:visibility="invisible"/>
+		<RelativeLayout
+				android:layout_width="70px"
+				android:layout_height="match_parent" android:id="@+id/switch_btn_layout"
+				android:layout_alignParentLeft="true">
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_switch" android:background="@null" android:scaleType="centerInside"
+					android:src="@drawable/preset_btn_switch" android:padding="12px"/>
+		</RelativeLayout>
+		<ImageView android:layout_width="60px" android:layout_height="60px" android:id="@+id/img_titleIcon"
+				   android:src="@drawable/logo"
+				   android:layout_centerVertical="true" android:layout_toRightOf="@+id/switch_btn_layout"
+				   android:visibility="visible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout"
+					android:background="#ff303030">
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/lingdao_layout" android:background="@color/NORMAL_BACKCOLOR"
+				android:clickable="true">
+			<RelativeLayout android:layout_width="match_parent" android:layout_height="240px"
+							android:id="@+id/lingdao_advert_layout">
+				<view class="com.damytech.preset_controls.HorizontalPager" android:layout_width="match_parent"
+					  android:layout_height="match_parent" android:id="@+id/lingdao_advert_pager"/>
+				<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content"
+							  android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+							  android:layout_centerHorizontal="true" android:id="@+id/lingdao_page_indicator_layout"/>
+				<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="1px"
+						android:id="@+id/img_advert_sep" android:background="#505050"
+						android:layout_alignParentBottom="true"/>
+			</RelativeLayout>
+			<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/lingdao_oper_layout"
+					android:layout_below="@+id/lingdao_advert_layout" android:paddingLeft="14px"
+					android:paddingTop="14px" android:paddingRight="8px" android:paddingBottom="8px"
+					android:background="@color/TITLE_BACKCOLOR">
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="6px">
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="2"
+									android:background="@color/YELLOW_COLOR" android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView89" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imageView28" android:scaleType="centerInside"
+								   android:layout_above="@+id/textView27" android:src="@drawable/icon_chuqin"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="出勤内容"
+								  android:id="@+id/textView27" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_chuqin"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="3"
+									android:background="@color/YELLOW_COLOR" android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView90" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imageView29" android:scaleType="centerInside"
+								   android:layout_above="@+id/textView28" android:src="@drawable/icon_meiyueyeji"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="每月各办事处单月业绩"
+								  android:id="@+id/textView28" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_meiyueyeji"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="6px">
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="1"
+									android:background="@color/YELLOW_COLOR" android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView91" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imgView8" android:scaleType="centerInside"
+								   android:layout_above="@+id/txtView4" android:src="@drawable/icon_meiriyeji"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="各办事处单日业绩"
+								  android:id="@+id/txtView4" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_meiriyeji"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="1"
+									android:background="@color/YELLOW_COLOR" android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView92" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imageView32" android:scaleType="centerInside"
+								   android:layout_above="@+id/textView31" android:src="@drawable/icon_banshichuyeji"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="办事处个人业绩"
+								  android:id="@+id/textView31" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_gerenyeji"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="6px">
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="1"
+									android:background="@color/YELLOW_COLOR" android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView93" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imgView2" android:scaleType="centerInside"
+								   android:layout_above="@+id/txtView2" android:src="@drawable/icon_daixiaoyeji"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="代销人员业绩"
+								  android:id="@+id/txtView2" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_daixiaoshangyeji"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout android:layout_width="0dp" android:layout_height="fill_parent"
+									android:layout_weight="1"
+									android:background="@color/YELLOW_COLOR"
+									android:layout_marginRight="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView94" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+								   android:id="@+id/imageView30" android:scaleType="centerInside"
+								   android:layout_above="@+id/textView29" android:src="@drawable/icon_dingjindan"
+								   android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView android:layout_width="match_parent" android:layout_height="50px" android:text="订金单查询"
+								  android:id="@+id/textView29" android:layout_alignParentBottom="true"
+								  android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR"
+								  android:textSize="22px"/>
+						<ImageButton android:layout_width="match_parent" android:layout_height="match_parent"
+									 android:id="@+id/btn_dingjindan"
+									 android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/fangke_layout" android:background="@color/NORMAL_BACKCOLOR"
+				android:clickable="true" android:visibility="gone">
+			<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="240px" android:id="@+id/advert_layout">
+				<view android:layout_width="match_parent"
+					  android:layout_height="match_parent"
+					  class="com.damytech.preset_controls.HorizontalPager" android:id="@+id/advert_pager"
+						/>
+				<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+						android:layout_centerHorizontal="true" android:id="@+id/page_indicator_layout"
+						>
+				</LinearLayout>
+				<ImageView
+						android:layout_width="match_parent"
+						android:layout_height="1px"
+						android:id="@+id/img_sep" android:background="#505050" android:layout_alignParentBottom="true"/>
+			</RelativeLayout>
+			<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:layout_below="@+id/advert_layout"
+					android:id="@+id/operation_layout" android:paddingLeft="14px" android:paddingTop="14px"
+					android:paddingRight="8px" android:paddingBottom="8px" android:background="@color/TITLE_BACKCOLOR">
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="0dp"
+						android:layout_height="fill_parent" android:layout_weight="1" android:paddingRight="6px">
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:layout_weight="1"
+							android:background="@color/YELLOW_COLOR"
+							android:id="@+id/gongsijianjie" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView95" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView" android:layout_above="@+id/txt_title"
+								android:scaleType="centerInside" android:src="@drawable/icon_company_intro"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="公司简介"
+								android:id="@+id/txt_title" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_company"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:layout_weight="1"
+							android:background="@color/YELLOW_COLOR"
+							android:id="@+id/banshichujieshao" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView96" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView3" android:layout_above="@+id/textView3"
+								android:scaleType="centerInside" android:src="@drawable/icon_home"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="办事处介绍"
+								android:id="@+id/textView3" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_office_intro"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+							android:id="@+id/binzangzhishi" android:layout_weight="1" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView97" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView7" android:layout_above="@+id/textView7"
+								android:scaleType="centerInside" android:src="@drawable/icon_book"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="殡葬知识"
+								android:id="@+id/textView7" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_bery_knowledge"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+							android:id="@+id/yitiaolongfuwu" android:layout_weight="1" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView98" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView9" android:layout_above="@+id/textView9"
+								android:scaleType="centerInside" android:src="@drawable/icon_one_dragon"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="一条龙服务"
+								android:id="@+id/textView9" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_one_dragon"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="0dp"
+						android:layout_height="fill_parent" android:layout_weight="1" android:paddingRight="6px">
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:layout_weight="1"
+							android:background="@color/YELLOW_COLOR"
+							android:id="@+id/zhengququanjing" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView99" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView2" android:layout_above="@+id/textView2"
+								android:scaleType="centerInside" android:src="@drawable/icon_place"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="整区全景"
+								android:id="@+id/textView2" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_birdseyeview"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:layout_weight="1"
+							android:background="@color/YELLOW_COLOR"
+							android:id="@+id/yuanquhuodong" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView100" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView4" android:layout_above="@+id/textView4"
+								android:scaleType="centerInside" android:src="@drawable/icon_camera"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="园区活动"
+								android:id="@+id/textView4" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_activity"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+							android:id="@+id/binzangxinwen" android:layout_weight="1" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView101" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView8" android:layout_above="@+id/textView8"
+								android:scaleType="centerInside" android:src="@drawable/icon_news"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="殡葬新闻"
+								android:id="@+id/textView8" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_bery_news"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+					<RelativeLayout
+							android:layout_width="match_parent"
+							android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+							android:id="@+id/shouhoufuwu" android:layout_weight="1" android:layout_marginBottom="6px">
+						<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+								  android:id="@+id/textView102" android:layout_margin="4px"
+								  android:background="#000000"/>
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView5" android:layout_above="@+id/textView5"
+								android:scaleType="centerInside" android:src="@drawable/icon_service"
+								android:paddingTop="14px" android:paddingBottom="10px"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="34px"
+								android:text="售后服务"
+								android:id="@+id/textView5" android:layout_alignParentBottom="true"
+								android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+								/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_afterservice"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"
+								/>
+					</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="0dp"
+						android:layout_height="fill_parent" android:layout_weight="1" android:paddingRight="6px">
+					<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="6px">
+						<RelativeLayout
+								android:layout_width="fill_parent"
+								android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+								android:id="@+id/shenghuofuwu" android:layout_weight="1" android:layout_marginBottom="6px">
+							<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+									  android:id="@+id/textView103" android:layout_margin="4px"
+									  android:background="#000000"/>
+							<ImageView
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/imageView10" android:layout_above="@+id/textView10"
+									android:scaleType="centerInside" android:src="@drawable/icon_life_service"
+									android:paddingTop="14px" android:paddingBottom="10px"/>
+							<TextView
+									android:layout_width="match_parent"
+									android:layout_height="34px"
+									android:text="生活服务"
+									android:id="@+id/textView10" android:layout_alignParentBottom="true"
+									android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+									/>
+							<ImageButton
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/btn_life_service"
+									android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+						</RelativeLayout>
+						<RelativeLayout
+								android:layout_width="fill_parent"
+								android:layout_height="0dp" android:background="@color/YELLOW_COLOR"
+								android:id="@+id/ditudaohang" android:layout_weight="1">
+							<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+									  android:id="@+id/textView104" android:layout_margin="4px"
+									  android:background="#000000"/>
+							<ImageView
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/imageView6" android:layout_above="@+id/textView6"
+									android:scaleType="centerInside" android:src="@drawable/icon_navigation"
+									android:paddingTop="14px" android:paddingBottom="10px"/>
+							<TextView
+									android:layout_width="match_parent"
+									android:layout_height="34px"
+									android:text="地图导航"
+									android:id="@+id/textView6" android:layout_alignParentBottom="true"
+									android:gravity="top|center_horizontal" android:textColor="@color/YELLOW_COLOR" android:textSize="20px"
+									/>
+							<ImageButton
+									android:layout_width="match_parent"
+									android:layout_height="match_parent"
+									android:id="@+id/btn_navigation"
+									android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+						</RelativeLayout>
+					</LinearLayout>
+					<RelativeLayout
+							android:layout_width="fill_parent"
+							android:layout_height="0dp" android:background="@color/YELLOW_COLOR" android:padding="4px"
+							android:id="@+id/yuyuecanguan" android:layout_weight="1" android:layout_marginBottom="6px">
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/imageView11" android:background="@drawable/bk_reserve_visit"/>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="40px"
+								android:text="预约参观"
+								android:id="@+id/textView11" android:layout_alignParentBottom="true"
+								android:gravity="center" android:background="#8c009a44" android:textColor="@color/YELLOW_COLOR"
+								android:textSize="20px"/>
+						<ImageButton
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:id="@+id/btn_reserve_visit"
+								android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

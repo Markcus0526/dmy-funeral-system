@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout" android:background="#FFFFFF"
+				android:paddingBottom="30px">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout">
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_title" android:layout_marginTop="30px" android:layout_marginLeft="30px"
+				android:textColor="#404040" android:textSize="24px" android:layout_marginRight="30px"/>
+		<RelativeLayout
+				android:layout_width="440px"
+				android:layout_height="200px" android:id="@+id/splash_layout" android:layout_centerHorizontal="true"
+				android:layout_below="@+id/txt_title" android:layout_marginTop="20px" android:background="#606060"
+				android:padding="2px">
+			<ImageView
+					android:layout_width="440px"
+					android:layout_height="200px"
+					android:id="@+id/img_splash"
+					android:layout_alignParentBottom="false" android:layout_alignParentTop="false"
+					android:layout_alignParentRight="false" android:scaleType="fitXY"
+					android:background="#00DA77"
+					/>
+			<ImageView
+					android:layout_width="100px"
+					android:layout_height="100px"
+					android:id="@+id/img_play" android:src="@drawable/img_play" android:scaleType="centerInside"
+					android:layout_centerInParent="true"/>
+			<ImageButton
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/btn_play" android:background="@drawable/preset_btn_rect_transparent_transparent"/>
+		</RelativeLayout>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
+				android:id="@+id/txt_contents" android:layout_alignLeft="@+id/splash_layout"
+				android:layout_alignRight="@+id/splash_layout" android:layout_below="@+id/splash_layout"
+				android:layout_marginTop="20px" android:textColor="#404040" android:textSize="22px"
+				android:ellipsize="end"/>
+	</RelativeLayout>
+</RelativeLayout>

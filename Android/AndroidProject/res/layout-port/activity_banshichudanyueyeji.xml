@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR">
+
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="办事处单月业绩"
+				  android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_marginTop="20px"
+				android:layout_centerHorizontal="true" android:id="@+id/month_layout"
+				android:layout_marginBottom="20px">
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="50px"
+					android:text="选择月份："
+					android:id="@+id/lbl_month" android:textSize="24px" android:textColor="#303030"
+					android:gravity="center_vertical"/>
+			<TextView
+					android:layout_width="220px"
+					android:layout_height="wrap_content"
+					android:id="@+id/txt_month" android:textSize="24px" android:textColor="#303030"
+					android:layout_marginLeft="10px" android:layout_toRightOf="@+id/lbl_month"
+					android:layout_alignTop="@+id/lbl_month" android:layout_alignBottom="@+id/lbl_month"
+					android:gravity="center_vertical"
+					android:background="@drawable/preset_round_transparent_gray" android:paddingLeft="20px"
+					android:text="1月"/>
+			<ImageView
+					android:layout_width="50px"
+					android:layout_height="wrap_content"
+					android:id="@+id/img_downarrow" android:layout_alignRight="@+id/txt_month"
+					android:layout_alignBottom="@+id/txt_month" android:layout_alignTop="@+id/txt_month"
+					android:scaleType="centerInside" android:src="@drawable/bk_down_arrow" android:padding="10px"
+					/>
+			<ImageButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/btn_month"
+					android:background="@drawable/preset_btn_round_transparent_transparent"
+					android:layout_alignTop="@+id/txt_month" android:layout_alignLeft="@+id/txt_month"
+					android:layout_alignBottom="@+id/txt_month" android:layout_alignRight="@+id/txt_month"/>
+		</RelativeLayout>
+		<view android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  class="com.damytech.preset_controls.TDScrollView" android:id="@+id/main_scrollview"
+			  android:layout_below="@+id/month_layout" android:layout_marginTop="10px"/>
+	</RelativeLayout>
+</RelativeLayout>

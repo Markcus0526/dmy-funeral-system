@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout" android:background="#FFFFFF"
+				android:paddingBottom="20px">
+
+	<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true" android:layout_alignParentBottom="false"
+					android:id="@+id/content_layout" android:layout_marginLeft="20px" android:layout_marginRight="20px"
+					android:layout_marginTop="20px">
+		<LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+					  android:layout_height="wrap_content" android:id="@+id/time_selector_layout"
+					  android:background="@null">
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/province_view" android:layout_weight="2"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/city_view" android:layout_weight="2"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/carno_view1" android:layout_weight="2"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/carno_view2" android:layout_weight="2"/>
+			<view class="com.damytech.preset_controls.WheelPicker.WheelView" android:layout_width="0dp"
+				  android:layout_height="wrap_content" android:id="@+id/carno_view3" android:layout_weight="2"/>
+			<view android:layout_width="0dp"
+				  android:layout_height="wrap_content"
+				  class="com.damytech.preset_controls.WheelPicker.WheelView" android:id="@+id/carno_view4" android:layout_weight="2"/>
+			<view android:layout_width="0dp"
+				  android:layout_height="wrap_content"
+				  class="com.damytech.preset_controls.WheelPicker.WheelView" android:id="@+id/carno_view5" android:layout_weight="2"/>
+		</LinearLayout>
+		<RelativeLayout android:layout_width="wrap_content" android:layout_height="50px"
+						android:id="@+id/operation_layout" android:layout_below="@+id/time_selector_layout"
+						android:layout_centerHorizontal="true" android:layout_marginTop="20px">
+			<Button android:layout_width="150px" android:layout_height="match_parent" android:text="确定"
+					android:id="@+id/btn_confirm" android:layout_gravity="center_horizontal"
+					android:background="@drawable/preset_btn_round_green_green" android:textSize="22px"
+					android:textColor="@android:color/white"/>
+			<Button android:layout_width="150px" android:layout_height="match_parent" android:text="取消"
+					android:id="@+id/btn_cancel" android:layout_toRightOf="@+id/btn_confirm"
+					android:layout_marginLeft="50px" android:background="@drawable/preset_btn_round_white_gray"
+					android:textSize="22px" android:textColor="#0091CA"/>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

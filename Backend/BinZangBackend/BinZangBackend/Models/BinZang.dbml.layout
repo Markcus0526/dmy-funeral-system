@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 21, 21.125" name="BinZang">
+  <DataContextMoniker Name="/BinZangDataContext" />
+  <nestedChildShapes>
+    <classShape Id="92b9cc99-1360-4b39-98d5-9efe94cd977b" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/BinZangDataContext/activitynotice_track" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35e93e63-3146-40a2-ac76-c119a4a6a550" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4475f476-0682-449f-9c3c-194cf3ac94c2" absoluteBounds="3.75, 0.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/BinZangDataContext/yitiaolong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ad33180-af5e-4038-8593-10dd971b671a" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="458df4e6-e8d5-4d55-82d0-187c3e70941e" absoluteBounds="0.75, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BinZangDataContext/admin_right" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c16ea0ad-5494-4d5d-8181-fad149405b20" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39238525-d32c-4d3e-bdfc-10f7fcd59b9d" absoluteBounds="3.75, 5.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/BinZangDataContext/agentservice_result" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d514add-2c88-4483-b934-86904987f2e6" absoluteBounds="3.765, 6.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="519f03d9-aded-4a2f-89b5-9f3f923a8aa8" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/BinZangDataContext/bonus_coef" />
+      <nestedChildShapes>
+        <elementListCompartment Id="664853d9-c0f8-4db1-9b58-98e2450bf245" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4e71ca7-828d-49f6-a3b6-f7ce9b76686c" absoluteBounds="6.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BinZangDataContext/chengshi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dd3ef42-647f-4bcd-9e3f-a1f471dfee5d" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7adf3991-673a-4c42-8b1d-c96d55336f44" absoluteBounds="6.75, 6.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/BinZangDataContext/client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="153fa2fa-1f22-465e-a51c-a89986d2e2bf" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bec4dad-b7b4-4104-9ffa-5b87ac5af501" absoluteBounds="9.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/BinZangDataContext/client_parent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87253cda-5dc0-42d0-8863-645e84105978" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c2ef846-222c-422b-85b1-3ed971e8cc88" absoluteBounds="0.75, 9.75, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/BinZangDataContext/deposit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3eeea358-d3e4-408c-8f00-82bd5162813e" absoluteBounds="0.765, 10.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf4f486f-0d93-4831-a823-a913d77e5517" absoluteBounds="9.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/BinZangDataContext/deposit_type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bac8c5d-ee4f-47da-89f8-676ef6fb5770" absoluteBounds="9.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cadc4fe5-d9a0-406a-a848-4c60d3eb933d" absoluteBounds="9.75, 7.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/BinZangDataContext/environ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dab18498-1bd5-48e0-84ae-41af0a566ef6" absoluteBounds="9.765, 8.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e41b0bd-5aaf-4572-9697-efa7f09c60db" absoluteBounds="3.75, 10.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/BinZangDataContext/grave_site" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ed4074c-680a-4181-b4e5-ba9c3953d1f0" absoluteBounds="3.765, 11.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08243093-15b4-44d6-b1f1-131b299d2288" absoluteBounds="9.75, 10.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/BinZangDataContext/information" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f2418c0-e241-4b01-8319-c1cff4bb6db1" absoluteBounds="9.765, 11.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d6a5ff9-806f-420d-80be-59aaf906b35d" absoluteBounds="12.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BinZangDataContext/jingdian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f8d1bd7-df82-4942-a0fa-991cf0d60fbb" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="167b3017-adeb-49f0-aadf-d7a362a3d05b" absoluteBounds="12.75, 4.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/BinZangDataContext/leave_restrict" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9653444-3ea1-455d-a65c-2867433a0657" absoluteBounds="12.765, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b00f5fe-6ca5-4d28-a88d-55ed27d4b894" absoluteBounds="12.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/BinZangDataContext/link_url" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10dc745f-440c-4eda-a03c-e3d2b15b9db1" absoluteBounds="12.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0eb40c70-b0aa-4745-8f38-6c0ded6fb111" absoluteBounds="12.75, 11.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/BinZangDataContext/office" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f61c535-e613-42ba-82d4-d131b775ad72" absoluteBounds="12.765, 12.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b3ca88de-8b27-4047-98e3-97fec10748ef" absoluteBounds="0.75, 14.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/BinZangDataContext/purchase_notice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="309965f5-3c71-4c19-a796-8e6a200b0ac1" absoluteBounds="0.765, 15.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ac4d1d8-93ae-46ae-8acb-eb20635653c8" absoluteBounds="3.75, 14.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BinZangDataContext/quyu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25c1e4af-d459-4a2e-9962-66c7ba635801" absoluteBounds="3.765, 15.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c404040-69fd-49b5-8957-6b32a73cec5c" absoluteBounds="6.75, 14.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BinZangDataContext/sacrifice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04aeab96-7e40-4696-93ed-459ada011dad" absoluteBounds="6.765, 15.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c356d63-6360-4c12-90e8-7400dba31e0b" absoluteBounds="15.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/BinZangDataContext/sacrifice_reserve" />
+      <nestedChildShapes>
+        <elementListCompartment Id="838226be-329f-4f04-9e7b-833e440f797c" absoluteBounds="15.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47f1f8c7-ea4b-47f9-a861-bb3b5dc60eb6" absoluteBounds="15.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/BinZangDataContext/scenery" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f66bcb56-1dea-4367-aa60-13fffbee0811" absoluteBounds="15.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2e50b74-4ca0-41cb-82a2-2b855f11d335" absoluteBounds="15.75, 6.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/BinZangDataContext/service_reserve" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f7cd320-4678-4e6b-b8e7-76c820718928" absoluteBounds="15.765, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d545c980-d20e-44ed-a297-9812d02f175c" absoluteBounds="9.75, 15.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BinZangDataContext/tomb_activity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc8d2c53-17fa-4d3a-a631-85b44a0afe1d" absoluteBounds="9.765, 16.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de790f20-d2b9-45b3-adaa-c529a84e12dc" absoluteBounds="15.75, 11.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/BinZangDataContext/tomb_area" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ac17c0a-e687-4d46-9594-33e91320354f" absoluteBounds="15.765, 12.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed576779-ee51-424c-aec0-75ea5abf6be6" absoluteBounds="12.75, 15.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/BinZangDataContext/tomb_purchase" />
+      <nestedChildShapes>
+        <elementListCompartment Id="020c5291-a876-4671-a9dd-8ee27b4b0601" absoluteBounds="12.765, 16.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d874323-099e-4300-8552-93957c90a2e3" absoluteBounds="15.75, 15.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/BinZangDataContext/tomb_reserve" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a05fe90-661e-47ad-bfa6-01152116f054" absoluteBounds="15.765, 16.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1dbc2ee3-49f0-4c47-86cc-79425269a732" absoluteBounds="0.75, 17.75, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/BinZangDataContext/tomb_service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98d807f8-b4ae-4817-9d7b-9cd6fb1027fc" absoluteBounds="0.765, 18.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3fcac81-f8aa-4e93-a8b7-89a6a27fddfe" absoluteBounds="18.75, 0.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/BinZangDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8fe490f-e7e3-4f79-ad01-ed23861353b6" absoluteBounds="18.765, 1.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11c65d0e-c168-4667-8315-1157b2a47f8c" absoluteBounds="3.75, 18.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/BinZangDataContext/user_leave" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44fbf29b-e1e9-417a-98ee-a5c754108c07" absoluteBounds="3.765, 19.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ce36ab1-d494-4c5c-af29-2c7c98c7384f" absoluteBounds="18.75, 5.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BinZangDataContext/visit_reserve" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8654b192-540d-4574-8623-10c04749440b" absoluteBounds="18.765, 6.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="103a489b-c17f-4693-9670-d28696df47de" absoluteBounds="7, 10.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BinZangDataContext/grave_tablet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daadc0a2-d1fe-435b-b600-bd3b8b26b5cd" absoluteBounds="7.015, 11.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

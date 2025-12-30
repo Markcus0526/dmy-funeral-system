@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="TITLE_HEIGHT">64px</dimen>
+	<dimen name="TITLE_FONTSIZE">26px</dimen>
+	<dimen name="BACKBUTTON_WIDTH">70px</dimen>
+</resources>

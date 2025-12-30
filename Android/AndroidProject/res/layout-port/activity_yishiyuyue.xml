@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@color/NORMAL_BACKCOLOR">
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/TITLE_HEIGHT"
+					android:background="@color/TITLE_BACKCOLOR" android:id="@+id/title_layout">
+		<TextView android:layout_width="match_parent" android:layout_height="match_parent"
+				  android:text="仪式预约" android:id="@+id/txt_title" android:textColor="@color/TITLE_FORECOLOR"
+				  android:textSize="@dimen/TITLE_FONTSIZE" android:gravity="center"/>
+		<ImageButton android:layout_width="@dimen/BACKBUTTON_WIDTH" android:layout_height="match_parent"
+					 android:id="@+id/btn_back" android:background="@null" android:scaleType="centerInside"
+					 android:src="@drawable/preset_btn_back" android:padding="10px"/>
+		<ImageButton
+				android:layout_width="70px"
+				android:layout_height="match_parent"
+				android:id="@+id/btn_user" android:layout_alignParentRight="true" android:background="@null"
+				android:scaleType="centerInside" android:src="@drawable/preset_btn_user" android:padding="10px"
+				android:visibility="invisible"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:id="@+id/content_layout" android:layout_below="@+id/title_layout">
+		<FrameLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:id="@+id/tab_frame_layout">
+		</FrameLayout>
+		<RadioGroup
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="horizontal"
+				android:id="@+id/tab_selector_layout" android:visibility="gone">
+			<RadioButton
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="New RadioButton"
+					android:id="@+id/radioButton" android:layout_weight="1" android:background="@null"
+					android:button="@null" android:checked="true"/>
+			<RadioButton
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="New RadioButton"
+					android:id="@+id/radioButton2" android:layout_weight="1" android:background="@null"
+					android:button="@null"/>
+			<RadioButton
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="New RadioButton"
+					android:id="@+id/radioButton3" android:layout_weight="1" android:background="@null"
+					android:button="@null"/>
+		</RadioGroup>
+	</RelativeLayout>
+</RelativeLayout>

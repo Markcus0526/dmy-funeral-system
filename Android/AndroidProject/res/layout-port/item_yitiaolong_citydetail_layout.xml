@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent_layout" android:background="#FFFFFF">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/content_layout"
+            >
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/image_layout"
+                android:paddingBottom="10px"
+                android:layout_marginTop="10px" android:layout_marginLeft="15px" android:layout_marginRight="15px"
+                android:layout_marginBottom="10px">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/txt_areano"
+                    android:textSize="25px" android:textColor="#ffff0000" android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30px"
+                    android:text="New Text"
+                    android:id="@+id/txt_areaname"
+                    android:textSize="22px" android:textColor="#303030"
+                    android:layout_toRightOf="@+id/txt_areano" android:layout_marginLeft="10px"
+                    android:layout_alignBottom="@+id/txt_areano"/>
+            <ImageView
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:id="@+id/image_area"
+                    android:layout_alignParentBottom="false" android:scaleType="centerInside"
+                    android:layout_below="@+id/txt_areaname" android:layout_marginTop="6px"
+                    android:background="@drawable/preset_rect_transparent_gray"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Text New Tex New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text New Text"
+                    android:id="@+id/txt_contents" android:layout_alignTop="@+id/image_area"
+                    android:layout_toRightOf="@+id/image_area" android:layout_marginRight="50px"
+                    android:layout_marginLeft="10px" android:textColor="#303030" android:textSize="20px"
+                    android:maxLines="3" android:ellipsize="end"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格:"
+                        android:id="@+id/lbl_price" android:textColor="#303030" android:textSize="20px"
+                        android:layout_alignLeft="@+id/txt_contents" android:layout_below="@+id/txt_contents"
+                        android:layout_alignBottom="@+id/image_area" android:gravity="bottom"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥99999999"
+                    android:id="@+id/txt_date" android:textSize="20px" android:textColor="#FF0000"
+                    android:layout_toRightOf="@+id/lbl_price" android:layout_alignBottom="@+id/lbl_price"
+                    android:layout_marginLeft="5px"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户认同度:"
+                    android:id="@+id/lbl_user_agree_rate" android:textColor="#303030" android:textSize="20px"
+                    android:layout_toRightOf="@+id/txt_date"
+                    android:layout_alignBottom="@+id/txt_date" android:layout_marginLeft="10px"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80"
+                    android:id="@+id/txt_user_agree_rate" android:textSize="20px" android:textColor="#FF0000"
+                    android:layout_alignParentRight="false" android:layout_alignParentBottom="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_toRightOf="@+id/lbl_user_agree_rate"
+                    android:layout_alignTop="@+id/lbl_user_agree_rate" android:layout_marginLeft="5px"/>
+            <ImageView android:layout_width="50px" android:layout_height="50px" android:id="@+id/imageView12"
+                       android:src="@drawable/bk_right_arrow" android:scaleType="centerInside" android:padding="8px"
+                       android:layout_alignParentRight="true"
+                       android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btn_servicesel"
+                 android:background="@drawable/preset_btn_rect_transparent_transparent"
+                 android:layout_alignTop="@+id/content_layout" android:layout_alignLeft="@+id/content_layout"
+                 android:layout_alignBottom="@+id/content_layout" android:layout_alignRight="@+id/content_layout"/>
+</RelativeLayout>

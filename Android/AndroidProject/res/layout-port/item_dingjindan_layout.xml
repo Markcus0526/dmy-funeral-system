@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:id="@+id/parent_layout"
+				android:background="@color/NORMAL_BACKCOLOR" android:paddingLeft="14px" android:paddingTop="14px"
+				android:paddingRight="14px" android:paddingBottom="6px">
+
+	<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/content_layout" android:padding="10px"
+			android:background="@drawable/preset_rect_transparent_gray">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="保留日期："
+				android:id="@+id/lbl_start_time" android:textColor="#303030" android:textSize="22px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_start_time" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_start_time" android:layout_toRightOf="@+id/lbl_start_time"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="保留到期日期："
+				android:id="@+id/lbl_end_time" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_start_time" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_end_time" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_end_time" android:layout_toRightOf="@+id/lbl_end_time"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="购买人名称："
+				android:id="@+id/lbl_user_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_end_time" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_user_name" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_user_name" android:layout_toRightOf="@+id/lbl_user_name"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="墓位编号："
+				android:id="@+id/lbl_tomb_no" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_user_name" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_tomb_no" android:textColor="#303030" android:textSize="22px"
+				android:layout_toRightOf="@+id/lbl_tomb_no" android:layout_alignTop="@+id/lbl_tomb_no"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="收款人："
+				android:id="@+id/lbl_receiver" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_tomb_no" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_receiver" android:textColor="#303030" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_receiver" android:layout_toRightOf="@+id/lbl_receiver"/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="价格："
+				android:id="@+id/lbl_price" android:textColor="#303030" android:textSize="22px"
+				android:layout_below="@+id/txt_receiver" android:layout_marginTop="10px"/>
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="New Text"
+				android:id="@+id/txt_date" android:textColor="#FF0000" android:textSize="22px"
+				android:layout_alignTop="@+id/lbl_price" android:layout_toRightOf="@+id/lbl_price"/>
+	</RelativeLayout>
+</RelativeLayout>
