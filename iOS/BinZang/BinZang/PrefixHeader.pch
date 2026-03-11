@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  BinZang
+//
+//  Created by KimOkChol on 4/13/15.
+//  Copyright (c) 2015 damy. All rights reserved.
+//
+
+#ifndef BinZang_PrefixHeader_pch
+#define BinZang_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreData/CoreData.h>
+#import "STDataInfo.h"
+#import "Global/GlobalFunc.h"
+#import "ConstString.h"
+#import "ServiceMethod.h"
+#import "UIImageView+AFNetworking.h"
+#import "NSURL+IFUnicodeURL.h"
+#import "SuperViewController.h"
+#import "SuperTableViewController.h"
+#import "Macros.h"
+#import "SVProgressHUD.h"
+#import "CommManager.h"
+#import "Common.h"
+#import "NSString+Validator.h"
+#import "Toast+UIView.h"
+#import "Config.h"
+#import "VisitorSuperViewController.h"
+#import "CustomerSuperViewController.h"
+#import "MIListEmptyView.h"
+
+#endif
+
+#endif
