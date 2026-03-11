@@ -1,45 +1,240 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# BinZang Funeral Management System (殡葬管理系统)
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+A comprehensive cross-platform funeral service management system for managing cemeteries, burial services, memorial reservations, and related business operations.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## 📋 Project Overview
+
+BinZang (殡葬) is a full-featured funeral management system designed to digitize and streamline funeral service operations. The system provides management for cemetery plots, burial reservations, memorial services, product sales, and performance tracking.
+
+## 🏗️ System Architecture
+
+```
+dmy-funeral-system/
+├── Backend/              # ASP.NET MVC 5 Backend
+├── Service/              # WCF Services & Windows Services
+├── Android/              # Android Mobile Application
+├── iOS/                  # iOS Mobile Application
+├── Database/             # SQL Server Database Files
+└── README.md
+```
+
+## 🖥️ Backend (ASP.NET MVC 5)
+
+### Technology Stack
+- **Framework:** ASP.NET MVC 5
+- **Language:** C#
+- **Database:** SQL Server
+- **Authentication:** Forms Authentication with Role-based Access Control
+
+### Controllers & Modules
+
+| Controller | Module | Description |
+|------------|--------|-------------|
+| `LingMuOrderController` | 陵墓管理 | Cemetery/Tomb ordering and management |
+| `LuoZangReserveController` | 落葬预约 | Burial reservation management |
+| `ZoneInformationController` | 区域信息 | Cemetery zone information management |
+| `JiBaiReserveController` | 祭拜预约 | Memorial/worship service reservations |
+| `ViewsReserveController` | 参观预约 | Visit/tour reservations |
+| `ShangPinOrderController` | 商品订单 | Product and merchandise orders |
+| `PersonController` | 人员管理 | Person/Staff management |
+| `ManagePersonController` | 人员管理 | Extended person management features |
+| `AccountController` | 账户管理 | User account management |
+| `OtherFeatureController` | 其他功能 | Additional features |
+| `RemarkInfoController` | 备注信息 | Remarks and notes management |
+| `VacationManageController` | 休假管理 | Vacation/leave management |
+| `PerformanceManagementController` | 业绩管理 | Performance tracking and management |
+
+### Project Structure
+
+```
+Backend/BinZangBackend/
+├── BinZangBackend/
+│   ├── Controllers/           # MVC Controllers
+│   ├── Models/               # Data models & LINQ to SQL
+│   ├── Views/                # Razor Views
+│   ├── Content/              # CSS, Images, JS, Plugins
+│   ├── Scripts/              # JavaScript libraries
+│   └── PushLib/              # JPush integration
+```
+
+### Third-Party Libraries
+- **KindEditor** - Rich text editor
+- **jqPlot** - Charting library
+- **dhtmlxScheduler** - Calendar/scheduling component
+- **JPush (极光推送)** - Push notifications
+- **Baidu Maps SDK** - Map integration
 
 ---
 
-## Edit a file
+## 🔧 Services
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+### BZService (WCF)
+Windows Communication Foundation service for business logic and data operations.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+```
+Service/BZService/
+├── Service.svc               # WCF Service endpoint
+├── SvcManager/               # Service business logic
+├── DBManager/                # Database management
+└── Library/                 # Utility libraries
+```
 
----
+### BZDailyService (Windows Service)
+Background Windows service for daily tasks and scheduled operations.
 
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+```
+Service/BZDailyService/
+├── BzDailyService/           # Service implementation
+└── ServiceSetup/             # Installation package
+```
 
 ---
 
-## Clone a repository
+## 📱 Mobile Applications
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+### Android Application
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+**Technology:** Native Android (Java)
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+**Features:**
+- Cemetery browsing and selection
+- Burial reservation
+- Memorial service booking
+- Visit scheduling
+- Product catalog and ordering
+- Push notifications via JPush
+- Baidu Maps integration for navigation
+- Role-based interface (Staff, Distributor, Manager)
+
+**Project Structure:**
+```
+Android/AndroidProject/
+├── src/com/                  # Java source code
+├── res/                      # Resources (layouts, drawables, values)
+├── libs/                     # Native libraries
+│   └── armeabi/              # ARM native libs (Baidu SDK, JPush, eTTS)
+├── assets/                   # Assets
+└── AndroidManifest.xml       # App manifest
+```
+
+**Key Libraries:**
+- Baidu Location SDK - GPS and location services
+- Baidu Navigation SDK - Turn-by-turn navigation
+- JPush - Push notifications
+- eTTS - Text-to-speech
+
+### iOS Application
+
+**Technology:** Native iOS (Objective-C/Swift)
+
+**Features:** Similar to Android with iOS-specific UI/UX
+
+---
+
+## 🗄️ Database
+
+- **BinZang.mdf** - Main database file
+- **BinZang_log.ldf** - Transaction log
+
+### Key Tables (Based on Controllers)
+- 陵墓订单 (LingMu Orders)
+- 落葬预约 (Burial Reservations)
+- 祭拜预约 (Memorial Reservations)
+- 区域信息 (Zone Information)
+- 商品订单 (Product Orders)
+- 人员信息 (Person Information)
+- 业绩记录 (Performance Records)
+- 休假记录 (Vacation Records)
+
+---
+
+## 🔐 Security & Authentication
+
+- **Authentication:** ASP.NET Forms Authentication
+- **Role-Based Access Control (RBAC)**
+- Custom Role Provider implementation
+- Session management with expiration filters
+
+### User Roles
+- Administrator
+- Staff/Member
+- Distributor (代销商)
+- Manager (经理)
+- Chairman (董事长)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Visual Studio 2017+ (for .NET development)
+- SQL Server 2012+
+- Android Studio (for Android app)
+- Xcode (for iOS app)
+
+### Backend Setup
+
+1. Open `Backend/BinZangBackend/BinZangBackend.sln` in Visual Studio
+2. Update connection string in `Web.config`
+3. Restore NuGet packages
+4. Build and run
+
+### Service Setup
+
+1. Open `Service/BZService.sln` for WCF service
+2. Open `Service/BZDailyService/BzDailyService.sln` for Windows service
+3. Configure database connections in `App.config`/`Web.config`
+4. Build and deploy
+
+### Mobile Development
+
+**Android:**
+1. Open project in Android Studio
+2. Configure Baidu SDK API key
+3. Configure JPush App Key
+4. Build debug APK
+
+**iOS:**
+1. Extract `iOS/BinZang.zip`
+2. Open in Xcode
+3. Configure provisioning profiles
+4. Build for simulator/device
+
+---
+
+## 📞 API Integration
+
+### Push Notifications
+- **Provider:** JPush (极光推送)
+- **Platforms:** Android & iOS
+- **Implementation:** Custom JPush library included
+
+### Maps & Navigation
+- **Provider:** Baidu (百度)
+- **SDK Keys:**
+  - Android: Configured in AndroidManifest.xml
+  - iOS: `iOS/Baidu/SDK_key.txt`
+
+---
+
+## 📊 Key Features Summary
+
+| Category | Features |
+|----------|----------|
+| Cemetery Management | Plot selection, zone management, availability tracking |
+| Burial Services | Reservation, scheduling, ceremony management |
+| Memorial Services | JiBai (祭拜) booking, memorial hall management |
+| Visit Scheduling | Tour reservations, visitor management |
+| Product Sales | Catalog, orders, inventory |
+| Personnel | Employee management, roles, vacation tracking |
+| Performance | Daily/monthly业绩 tracking, reports |
+| Notifications | Push notifications, system alerts |
+
+---
+
+## 📄 License
+
+This project contains proprietary code. All rights reserved.
+
+---
+
